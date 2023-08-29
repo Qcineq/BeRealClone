@@ -29,13 +29,25 @@ struct Feed: View {
                             
                             Spacer()
                             
-                            Image("profilePic")
+                            Image("profilePhoto")
                                 .resizable()
                                 .frame(width: 35, height: 35)
                                 .cornerRadius(17.5)
                         }
                         .padding(.horizontal)
+                        
+                        HStack {
+                            Text("My Friends")
+                                .foregroundColor(.white)
+                                .fontWeight(.semibold)
+                            
+                            Text("Discovery")
+                                .foregroundColor(.gray)
+                        }
                     }
+                    
+                    Spacer()
+                    
                 }
             }
         }
