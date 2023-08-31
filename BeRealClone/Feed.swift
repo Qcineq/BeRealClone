@@ -52,7 +52,7 @@ struct Feed: View {
                                 .foregroundColor(.gray)
                             
                             HStack {
-                                Text("Bemowo, Warszawa • 1 hr late")
+                                Text("Warszawa, Bemowo • 1 hr late")
                                     .foregroundColor(.gray)
                                     .font(.system(size: 12))
                                 ThreeDots(size: 3, color: .gray)

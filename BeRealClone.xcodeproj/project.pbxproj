@@ -14,6 +14,7 @@
 		5EA456682A9DD12B004C0A07 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA456672A9DD12B004C0A07 /* Feed.swift */; };
 		5EA4566A2A9DD79D004C0A07 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA456692A9DD79D004C0A07 /* FeedCell.swift */; };
 		5EA4566D2A9E99C3004C0A07 /* ThreeDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4566C2A9E99C3004C0A07 /* ThreeDots.swift */; };
+		5EA4566F2AA13CC5004C0A07 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4566E2AA13CC5004C0A07 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5EA456672A9DD12B004C0A07 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		5EA456692A9DD79D004C0A07 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		5EA4566C2A9E99C3004C0A07 /* ThreeDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDots.swift; sourceTree = "<group>"; };
+		5EA4566E2AA13CC5004C0A07 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 				5EA4566B2A9E99A9004C0A07 /* Helpers */,
 				5EA456592A9DD02C004C0A07 /* BeRealCloneApp.swift */,
 				5EA456672A9DD12B004C0A07 /* Feed.swift */,
+				5EA456692A9DD79D004C0A07 /* FeedCell.swift */,
+				5EA4566E2AA13CC5004C0A07 /* Profile.swift */,
 				5EA4565B2A9DD02C004C0A07 /* ContentView.swift */,
 				5EA4565D2A9DD02D004C0A07 /* Assets.xcassets */,
 				5EA4565F2A9DD02D004C0A07 /* Preview Content */,
-				5EA456692A9DD79D004C0A07 /* FeedCell.swift */,
 			);
 			path = BeRealClone;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA4565C2A9DD02C004C0A07 /* ContentView.swift in Sources */,
+				5EA4566F2AA13CC5004C0A07 /* Profile.swift in Sources */,
 				5EA4566D2A9E99C3004C0A07 /* ThreeDots.swift in Sources */,
 				5EA4566A2A9DD79D004C0A07 /* FeedCell.swift in Sources */,
 				5EA456682A9DD12B004C0A07 /* Feed.swift in Sources */,
