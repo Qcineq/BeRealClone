@@ -78,7 +78,28 @@ struct Profile: View {
                                 .opacity(0.07)
                                 .frame(height: 230)
                             
-                            
+                            VStack {
+                                HStack {
+                                    Text("Last 14 days")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 16))
+                                        .padding(.top, 8)
+                                    
+                                    Spacer()
+                                }
+                                .padding(.leading)
+                                
+                                VStack {
+                                    HStack(spacing: 4) {
+                                        
+                                        ForEach(1..<8) { x in
+                                            
+                                            MemoryView(day: x)
+                                        }
+                                        
+                                    }
+                                }
+                            }
                         }
                     }
                 }
