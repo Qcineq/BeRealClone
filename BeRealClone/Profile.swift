@@ -96,13 +96,43 @@ struct Profile: View {
                                             
                                             MemoryView(day: x)
                                         }
-                                        
                                     }
+                                    
+                                    HStack(spacing: 4) {
+                                        
+                                        ForEach(1..<8) { x in
+                                            
+                                            MemoryView(day: x + 7)
+                                        }
+                                    }
+                                    .padding(.top, -8)
                                 }
+                                .padding(.top, -4)
+                                
+                                Text("View all my Memories")
+                                    .foregroundColor(.white)
+                                    .fontWeight(.semibold)
+                                    .font(.system(size: 13))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(.gray, lineWidth: 2)
+                                            .frame(width: 175, height: 20)
+                                            .opacity(0.5)
+                                    )
+                                    .padding(.top, 4)
                             }
+                            .padding(.top, -15)
                         }
                     }
+                    
+                    Text("🔗 BeRe.al/kuucin")
+                        .foregroundColor(.white)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 16))
+                        .padding(.top, 8)
+                    Spacer()
                 }
+                .padding(.top, 35)
             }
         }
     }
