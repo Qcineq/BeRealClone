@@ -37,38 +37,43 @@ struct Settings: View {
                     }
                     
                     VStack {
-                        RoundedRectangle(cornerRadius: 16)
-                            .frame(width: width * 0.9, height: 90)
-                            .foregroundColor(.white)
-                            .opacity(0.07)
-                            .overlay(
-                                
-                                HStack {
-                                    Image("profilePhoto")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 60, height: 60)
-                                        .cornerRadius(30)
+                        NavigationLink {
+                            Profile()
+                        } label: {
+                            RoundedRectangle(cornerRadius: 16)
+                                .frame(width: width * 0.9, height: 90)
+                                .foregroundColor(.white)
+                                .opacity(0.07)
+                                .overlay(
                                     
-                                    VStack(alignment: .leading) {
-                                        Text("Kuba")
-                                            .foregroundColor(.white)
-                                            .fontWeight(.semibold)
-                                            .font(.system(size: 18))
+                                    HStack {
+                                        Image("profilePhoto")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 60, height: 60)
+                                            .cornerRadius(30)
                                         
-                                        Text("Kuucin")
-                                            .foregroundColor(.white)
-                                            .fontWeight(.semibold)
-                                            .font(.system(size: 14))
+                                        VStack(alignment: .leading) {
+                                            Text("Kuba")
+                                                .foregroundColor(.white)
+                                                .fontWeight(.semibold)
+                                                .font(.system(size: 18))
+                                            
+                                            Text("Kuucin")
+                                                .foregroundColor(.white)
+                                                .fontWeight(.semibold)
+                                                .font(.system(size: 14))
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                        Image(systemName: "chevron.right")
+                                            .foregroundColor(.gray)
                                     }
-                                    
-                                    Spacer()
-                                    
-                                    Image(systemName: "chevron.right")
-                                        .foregroundColor(.gray)
-                                }
-                                    .padding(.horizontal, 18)
-                            )
+                                        .padding(.horizontal, 18)
+                                )
+                        }
+
                         
                         VStack(spacing: 6) {
                             HStack {
@@ -107,7 +112,7 @@ struct Settings: View {
                         }
                         .padding(.top, 12)
                         
-                        VStack {
+                        VStack (spacing: 6) {
                             HStack {
                                 Text("SETTINGS")
                                     .foregroundColor(.gray)
@@ -151,12 +156,211 @@ struct Settings: View {
                                         .frame(width: width * 0.9, height: 0.3)
                                         .opacity(0.4)
                                         .foregroundColor(.gray)
+                                    
+                                    NavigationLink {
+                                        ContentView() // PLACEHOLDER
+                                    } label: {
+                                        HStack {
+                                            Image(systemName: "globe.europe.africa.fill")
+                                                .foregroundColor(.white)
+                                            
+                                            Text("Time Zone: Europe")
+                                                .foregroundColor(.white)
+                                                .fontWeight(.semibold)
+                                            
+                                            Spacer()
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
+                                        .padding(.horizontal, width * 0.1)
+                                        .frame(height: 30)
+                                    }
+
+                                    
+                                    Rectangle()
+                                        .frame(width: width * 0.9, height: 0.3)
+                                        .opacity(0.4)
+                                        .foregroundColor(.gray)
+                                    
+                                    NavigationLink {
+                                        ContentView() // PLACEHOLDER
+                                    } label: {
+                                        HStack {
+                                            Image(systemName: "hammer.circle")
+                                                .foregroundColor(.white)
+                                            
+                                            Text("Other")
+                                                .foregroundColor(.white)
+                                                .fontWeight(.semibold)
+                                            
+                                            Spacer()
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
+                                        .padding(.horizontal, width * 0.1)
+                                        .frame(height: 30)
+                                    }
                                 }
                             }
                         }
+                        .padding(.top, 12)
+                        
+                        VStack(spacing: 6) {
+                            HStack {
+                                Text("ABOUT")
+                                    .foregroundColor(.gray)
+                                    .fontWeight(.semibold)
+                                    .font(.system(size: 12))
+                                    .padding(.horizontal, width * 0.05)
+                                
+                                Spacer()
+                            }
+                            
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 14)
+                                    .frame(width: width * 0.9, height: 190)
+                                    .foregroundColor(.white)
+                                .opacity(0.07)
+                                
+                                VStack {
+                                    NavigationLink {
+                                        ContentView() // PLACEHOLDER
+                                    } label: {
+                                        HStack {
+                                            Image(systemName: "square.and.arrow.up")
+                                                .foregroundColor(.white)
+                                            
+                                            Text("Share BeReal")
+                                                .foregroundColor(.white)
+                                                .fontWeight(.semibold)
+                                            
+                                            Spacer()
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
+                                        .padding(.horizontal, width * 0.1)
+                                        .frame(height: 30)
+                                    }
+
+                                    
+                                    Rectangle()
+                                        .frame(width: width * 0.9, height: 0.3)
+                                        .opacity(0.4)
+                                        .foregroundColor(.gray)
+                                    
+                                    NavigationLink {
+                                        ContentView() // PLACEHOLDER
+                                    } label: {
+                                        HStack {
+                                            Image(systemName: "star")
+                                                .foregroundColor(.white)
+                                            
+                                            Text("Rate BeReal")
+                                                .foregroundColor(.white)
+                                                .fontWeight(.semibold)
+                                            
+                                            Spacer()
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
+                                        .padding(.horizontal, width * 0.1)
+                                        .frame(height: 30)
+                                    }
+
+                                    
+                                    Rectangle()
+                                        .frame(width: width * 0.9, height: 0.3)
+                                        .opacity(0.4)
+                                        .foregroundColor(.gray)
+                                    
+                                    NavigationLink {
+                                        ContentView() // PLACEHOLDER
+                                    } label: {
+                                        HStack {
+                                            Image(systemName: "lifepreserver")
+                                                .foregroundColor(.white)
+                                            
+                                            Text("Help")
+                                                .foregroundColor(.white)
+                                                .fontWeight(.semibold)
+                                            
+                                            Spacer()
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
+                                        .padding(.horizontal, width * 0.1)
+                                        .frame(height: 30)
+                                    }
+                                    
+                                    Rectangle()
+                                        .frame(width: width * 0.9, height: 0.3)
+                                        .opacity(0.4)
+                                        .foregroundColor(.gray)
+                                    
+                                    NavigationLink {
+                                        ContentView() // PLACEHOLDER
+                                    } label: {
+                                        HStack {
+                                            Image(systemName: "info.circle")
+                                                .foregroundColor(.white)
+                                            
+                                            Text("About")
+                                                .foregroundColor(.white)
+                                                .fontWeight(.semibold)
+                                            
+                                            Spacer()
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
+                                        .padding(.horizontal, width * 0.1)
+                                        .frame(height: 30)
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .padding(.top, 12)
+                        
+                        // LOGOUT BUTTON
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: width * 0.9, height: 45)
+                                .foregroundColor(.white)
+                                .opacity(0.07)
+                            
+                            HStack {
+                                Spacer()
+                                Text("Log Out")
+                                    .foregroundColor(.red)
+                                Spacer()
+                            }
+                            .padding(.horizontal, width * 0.1)
+                            .frame(height: 30)
+                        }
+                        .padding(.top, 12)
+                        
+                        Text("Version 1.10.0 (11935) - Production")
+                            .foregroundColor(.gray)
+                            .font(.system(size: 12))
+                            .padding(.top, 12)
+                        
                     }
                 }
             }
+            .navigationBarHidden(true)
         }
     }
 }
