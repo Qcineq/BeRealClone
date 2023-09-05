@@ -18,6 +18,7 @@
 		5EA456712AA141E1004C0A07 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA456702AA141E1004C0A07 /* MemoryView.swift */; };
 		5EA456732AA53077004C0A07 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA456722AA53077004C0A07 /* Settings.swift */; };
 		5EA456782AA70C03004C0A07 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA456772AA70C03004C0A07 /* EditProfile.swift */; };
+		5EA4567B2AA71297004C0A07 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4567A2AA71297004C0A07 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		5EA456702AA141E1004C0A07 /* MemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryView.swift; sourceTree = "<group>"; };
 		5EA456722AA53077004C0A07 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5EA456772AA70C03004C0A07 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		5EA4567A2AA71297004C0A07 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		5EA456582A9DD02C004C0A07 /* BeRealClone */ = {
 			isa = PBXGroup;
 			children = (
+				5EA456792AA7127F004C0A07 /* Extensions */,
 				5EA456742AA5307E004C0A07 /* View */,
 				5EA4566B2A9E99A9004C0A07 /* Components */,
 				5EA456592A9DD02C004C0A07 /* BeRealCloneApp.swift */,
@@ -102,6 +105,14 @@
 				5EA456772AA70C03004C0A07 /* EditProfile.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5EA456792AA7127F004C0A07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5EA4567A2AA71297004C0A07 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				5EA456732AA53077004C0A07 /* Settings.swift in Sources */,
 				5EA4566F2AA13CC5004C0A07 /* Profile.swift in Sources */,
 				5EA4566D2A9E99C3004C0A07 /* ThreeDots.swift in Sources */,
+				5EA4567B2AA71297004C0A07 /* Extensions.swift in Sources */,
 				5EA4566A2A9DD79D004C0A07 /* FeedCell.swift in Sources */,
 				5EA456682A9DD12B004C0A07 /* Feed.swift in Sources */,
 				5EA4565A2A9DD02C004C0A07 /* BeRealCloneApp.swift in Sources */,
