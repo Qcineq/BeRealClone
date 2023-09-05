@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        Feed()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Feed()
+        ContentView()
     }
 }
