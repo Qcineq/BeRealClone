@@ -12,6 +12,13 @@ struct TimeZoneView: View {
         ZStack {
             ZStack {
                 Color.black.ignoresSafeArea()
+                
+                VStack {
+                    ZStack {
+                        Text("Timezone")
+                            .foregroundColor(.white)
+                    }
+                }
             }
         }
     }
