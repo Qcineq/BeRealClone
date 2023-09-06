@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TimeZoneView: View {
+    
+    @State var area = "europe"
+    
     var body: some View {
         ZStack {
             ZStack {
@@ -62,7 +65,7 @@ struct TimeZoneView: View {
                             
                             VStack {
                                 Button {
-                                    
+                                    self.area = "europe"
                                 } label: {
                                     HStack {
                                         Image(systemName: "globe.europe.africa.fill")
@@ -74,9 +77,11 @@ struct TimeZoneView: View {
                                         
                                         Spacer()
                                         
-                                        Image(systemName: "checkmark.circle")
-                                            .foregroundColor(.gray)
-                                            .font(.system(size: 14))
+                                        if area == "europe" {
+                                            Image(systemName: "checkmark.circle")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
                                     }
                                     .padding(.horizontal, UIScreen.main.bounds.width * 0.05)
                                     .frame(height: 30)
@@ -93,7 +98,7 @@ struct TimeZoneView: View {
                                 }
                                 
                                 Button {
-                                    
+                                    self.area = "americas"
                                 } label: {
                                     HStack {
                                         Image(systemName: "globe.americas.fill")
@@ -105,9 +110,11 @@ struct TimeZoneView: View {
                                         
                                         Spacer()
                                         
-                                        Image(systemName: "checkmark.circle")
-                                            .foregroundColor(.gray)
-                                            .font(.system(size: 14))
+                                        if area == "americas" {
+                                            Image(systemName: "checkmark.circle")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
                                     }
                                     .padding(.horizontal, UIScreen.main.bounds.width * 0.05)
                                     .frame(height: 30)
@@ -124,7 +131,7 @@ struct TimeZoneView: View {
                                 }
                                 
                                 Button {
-                                    
+                                    self.area = "eastAsia"
                                 } label: {
                                     HStack {
                                         Image(systemName: "globe.asia.australia.fill")
@@ -136,9 +143,11 @@ struct TimeZoneView: View {
                                         
                                         Spacer()
                                         
-                                        Image(systemName: "checkmark.circle")
-                                            .foregroundColor(.gray)
-                                            .font(.system(size: 14))
+                                        if area == "eastAsia" {
+                                            Image(systemName: "checkmark.circle")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
                                     }
                                     .padding(.horizontal, UIScreen.main.bounds.width * 0.05)
                                     .frame(height: 30)
@@ -154,7 +163,7 @@ struct TimeZoneView: View {
                                 }
                                 
                                 Button {
-                                    
+                                    self.area = "westAsia"
                                 } label: {
                                     HStack {
                                         Image(systemName: "globe.asia.australia.fill")
@@ -166,17 +175,38 @@ struct TimeZoneView: View {
                                         
                                         Spacer()
                                         
-                                        Image(systemName: "checkmark.circle")
-                                            .foregroundColor(.gray)
-                                            .font(.system(size: 14))
+                                        if area == "westAsia" {
+                                            Image(systemName: "checkmark.circle")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 14))
+                                        }
                                     }
                                     .padding(.horizontal, UIScreen.main.bounds.width * 0.05)
                                     .frame(height: 30)
                                 }
                             }
                         }
+                        .padding(.top)
                     }
+                    
+                    Spacer()
+                    
+                    Button {
+                        
+                    } label: {
+                        RoundedRectangle(cornerRadius: 14)
+                            .frame(width: UIScreen.main.bounds.width * 0.9, height: 45)
+                            .foregroundColor(Color(red: 86/255, green: 86/255, blue: 88/255))
+                            .overlay(
+                                Text("Save")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 14))
+                            )
+                    }
+
                 }
+                .padding(.top, 50)
+                .padding(.horizontal)
             }
         }
     }
