@@ -25,6 +25,8 @@
 		5EC7A5CA2AADBEA6006F133E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7A5C92AADBEA6006F133E /* SearchBar.swift */; };
 		5EC7A5CC2AADC5AB006F133E /* Suggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7A5CB2AADC5AB006F133E /* Suggestions.swift */; };
 		5EC7A5CE2AADC74C006F133E /* SuggestionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7A5CD2AADC74C006F133E /* SuggestionCellView.swift */; };
+		5EC7A5D02AADCADC006F133E /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7A5CF2AADCADC006F133E /* Friends.swift */; };
+		5EC7A5D22AADCBF8006F133E /* FriendsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7A5D12AADCBF8006F133E /* FriendsCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		5EC7A5C92AADBEA6006F133E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		5EC7A5CB2AADC5AB006F133E /* Suggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestions.swift; sourceTree = "<group>"; };
 		5EC7A5CD2AADC74C006F133E /* SuggestionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCellView.swift; sourceTree = "<group>"; };
+		5EC7A5CF2AADCADC006F133E /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		5EC7A5D12AADCBF8006F133E /* FriendsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		5EA4566B2A9E99A9004C0A07 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5EC7A5CF2AADCADC006F133E /* Friends.swift */,
 				5EC7A5C72AADBE2A006F133E /* LeftMenuTopView.swift */,
 				5EA456702AA141E1004C0A07 /* MemoryView.swift */,
 				5EA4566C2A9E99C3004C0A07 /* ThreeDots.swift */,
@@ -108,6 +113,7 @@
 				5EC7A5C92AADBEA6006F133E /* SearchBar.swift */,
 				5EC7A5CB2AADC5AB006F133E /* Suggestions.swift */,
 				5EC7A5CD2AADC74C006F133E /* SuggestionCellView.swift */,
+				5EC7A5D12AADCBF8006F133E /* FriendsCellView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -212,12 +218,14 @@
 				5EC7A5CE2AADC74C006F133E /* SuggestionCellView.swift in Sources */,
 				5EC7A5CC2AADC5AB006F133E /* Suggestions.swift in Sources */,
 				5EA4566F2AA13CC5004C0A07 /* ProfileView.swift in Sources */,
+				5EC7A5D02AADCADC006F133E /* Friends.swift in Sources */,
 				5EC7A5CA2AADBEA6006F133E /* SearchBar.swift in Sources */,
 				5EA4566D2A9E99C3004C0A07 /* ThreeDots.swift in Sources */,
 				5EA4567B2AA71297004C0A07 /* Extensions.swift in Sources */,
 				5EA4566A2A9DD79D004C0A07 /* FeedCell.swift in Sources */,
 				5EA456682A9DD12B004C0A07 /* FeedView.swift in Sources */,
 				5EA4565A2A9DD02C004C0A07 /* BeRealCloneApp.swift in Sources */,
+				5EC7A5D22AADCBF8006F133E /* FriendsCellView.swift in Sources */,
 				5EA456782AA70C03004C0A07 /* EditProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
