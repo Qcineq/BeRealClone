@@ -14,6 +14,8 @@ struct LeftMenuView: View {
                 Color.black.ignoresSafeArea()
                 
                 LeftMenuTopView()
+                
+                Suggestions()
             }
         }
     }
