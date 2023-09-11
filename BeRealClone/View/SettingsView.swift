@@ -38,7 +38,7 @@ struct Settings: View {
                     
                     VStack {
                         NavigationLink {
-                            Profile()
+                            
                         } label: {
                             RoundedRectangle(cornerRadius: 16)
                                 .frame(width: width * 0.9, height: 90)

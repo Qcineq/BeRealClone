@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct Feed: View {
+struct FeedView: View {
+    
+    @Binding var mainMenu: String
+    
     var body: some View {
         ZStack {
             Color.black
@@ -71,9 +74,16 @@ struct Feed: View {
                 VStack {
                     VStack {
                         HStack {
-                            Image(systemName: "person.2.fill")
-                                .foregroundColor(.white)
                             
+                            Button {
+                                withAnimation {
+                                    self.mainMenu = "left"
+                                }
+                            } label: {
+                                Image(systemName: "person.2.fill")
+                                    .foregroundColor(.white)
+                            }
+
                             Spacer()
                             
                             Text("BeReal.")
@@ -83,10 +93,16 @@ struct Feed: View {
                             
                             Spacer()
                             
-                            Image("profilePhoto")
-                                .resizable()
-                                .frame(width: 35, height: 35)
-                                .cornerRadius(17.5)
+                            Button {
+                                withAnimation {
+                                    self.mainMenu = "profile"
+                                }
+                            } label: {
+                                Image("profilePhoto")
+                                    .resizable()
+                                    .frame(width: 35, height: 35)
+                                    .cornerRadius(17.5)
+                            }
                         }
                         .padding(.horizontal)
                         
@@ -110,6 +126,6 @@ struct Feed: View {
 
 struct Feed_Previews: PreviewProvider {
     static var previews: some View {
-        Feed()
+        FeedView(mainMenu: .constant("feed"))
     }
 }
