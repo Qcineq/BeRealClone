@@ -30,6 +30,7 @@ struct OtherView: View {
                             
                             Spacer()
                         }
+                        .padding(.horizontal)
                     }
                     
                     Spacer()

@@ -28,6 +28,7 @@ struct HelpView: View {
                             
                             Spacer()
                         }
+                        .padding(.horizontal)
                     }
                     
                     Spacer()

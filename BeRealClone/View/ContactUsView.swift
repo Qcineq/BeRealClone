@@ -26,6 +26,7 @@ struct ContactUsView: View {
                             
                             Spacer()
                         }
+                        .padding(.horizontal)
                     }
                     
                     Spacer()
