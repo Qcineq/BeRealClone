@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2474F2AB10291007D7CE4 /* OtherView.swift */; };
+		5EA247522AB1059D007D7CE4 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247512AB1059D007D7CE4 /* HelpView.swift */; };
+		5EA247542AB106C3007D7CE4 /* ChevronButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247532AB106C3007D7CE4 /* ChevronButtonView.swift */; };
+		5EA247562AB107D8007D7CE4 /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247552AB107D8007D7CE4 /* ContactUsView.swift */; };
 		5EA4565A2A9DD02C004C0A07 /* BeRealCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA456592A9DD02C004C0A07 /* BeRealCloneApp.swift */; };
 		5EA4565C2A9DD02C004C0A07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4565B2A9DD02C004C0A07 /* ContentView.swift */; };
 		5EA4565E2A9DD02D004C0A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA4565D2A9DD02D004C0A07 /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 
 /* Begin PBXFileReference section */
 		5EA2474F2AB10291007D7CE4 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
+		5EA247512AB1059D007D7CE4 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		5EA247532AB106C3007D7CE4 /* ChevronButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChevronButtonView.swift; sourceTree = "<group>"; };
+		5EA247552AB107D8007D7CE4 /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
 		5EA456562A9DD02C004C0A07 /* BeRealClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeRealClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA456592A9DD02C004C0A07 /* BeRealCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeRealCloneApp.swift; sourceTree = "<group>"; };
 		5EA4565B2A9DD02C004C0A07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 				5EC7A5CD2AADC74C006F133E /* SuggestionCellView.swift */,
 				5EC7A5D12AADCBF8006F133E /* FriendsCellView.swift */,
 				5EC7A5D32AADCDE8006F133E /* Requests.swift */,
+				5EA247532AB106C3007D7CE4 /* ChevronButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -133,6 +140,8 @@
 				5EA456772AA70C03004C0A07 /* EditProfileView.swift */,
 				5EA4567C2AA924C6004C0A07 /* TimeZoneView.swift */,
 				5EA2474F2AB10291007D7CE4 /* OtherView.swift */,
+				5EA247512AB1059D007D7CE4 /* HelpView.swift */,
+				5EA247552AB107D8007D7CE4 /* ContactUsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,9 +234,12 @@
 				5EC7A5CC2AADC5AB006F133E /* Suggestions.swift in Sources */,
 				5EA4566F2AA13CC5004C0A07 /* ProfileView.swift in Sources */,
 				5EC7A5D02AADCADC006F133E /* Friends.swift in Sources */,
+				5EA247522AB1059D007D7CE4 /* HelpView.swift in Sources */,
 				5EC7A5CA2AADBEA6006F133E /* SearchBar.swift in Sources */,
+				5EA247562AB107D8007D7CE4 /* ContactUsView.swift in Sources */,
 				5EA4566D2A9E99C3004C0A07 /* ThreeDots.swift in Sources */,
 				5EC7A5D42AADCDE8006F133E /* Requests.swift in Sources */,
+				5EA247542AB106C3007D7CE4 /* ChevronButtonView.swift in Sources */,
 				5EA4567B2AA71297004C0A07 /* Extensions.swift in Sources */,
 				5EA4566A2A9DD79D004C0A07 /* FeedCell.swift in Sources */,
 				5EA456682A9DD12B004C0A07 /* FeedView.swift in Sources */,
