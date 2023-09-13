@@ -11,6 +11,8 @@ struct OtherView: View {
     
     @State var fastCamera = false
     
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack {
             ZStack {
@@ -24,10 +26,14 @@ struct OtherView: View {
                             .fontWeight(.semibold)
                         
                         HStack {
-                            Image(systemName: "arrow.backward")
-                                .foregroundColor(.white)
-                                .font(.system(size: 20))
-                            
+                            Button {
+                                dismiss()
+                            } label: {
+                                Image(systemName: "arrow.backward")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 20))
+                            }
+
                             Spacer()
                         }
                         .padding(.horizontal)

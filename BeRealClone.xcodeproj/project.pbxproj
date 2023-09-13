@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E971FCA2AB25E4900E5EA9A /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */; };
 		5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2474F2AB10291007D7CE4 /* OtherView.swift */; };
 		5EA247522AB1059D007D7CE4 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247512AB1059D007D7CE4 /* HelpView.swift */; };
 		5EA247542AB106C3007D7CE4 /* ChevronButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247532AB106C3007D7CE4 /* ChevronButtonView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		5EA2474F2AB10291007D7CE4 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
 		5EA247512AB1059D007D7CE4 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		5EA247532AB106C3007D7CE4 /* ChevronButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChevronButtonView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E971FCB2AB260BD00E5EA9A /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				5EA456722AA53077004C0A07 /* SettingsView.swift */,
+				5EA456772AA70C03004C0A07 /* EditProfileView.swift */,
+				5EA4567C2AA924C6004C0A07 /* TimeZoneView.swift */,
+				5EA2474F2AB10291007D7CE4 /* OtherView.swift */,
+				5EA247512AB1059D007D7CE4 /* HelpView.swift */,
+				5EA247552AB107D8007D7CE4 /* ContactUsView.swift */,
+				5EA247572AB109D0007D7CE4 /* MemoriesVIew.swift */,
+				5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
 		5EA4564D2A9DD02C004C0A07 = {
 			isa = PBXGroup;
 			children = (
@@ -135,16 +152,10 @@
 		5EA456742AA5307E004C0A07 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E971FCB2AB260BD00E5EA9A /* SettingsView */,
 				5EC7A5C52AADBDFC006F133E /* LeftMenuView.swift */,
-				5EA456722AA53077004C0A07 /* SettingsView.swift */,
 				5EA456672A9DD12B004C0A07 /* FeedView.swift */,
 				5EA4566E2AA13CC5004C0A07 /* ProfileView.swift */,
-				5EA456772AA70C03004C0A07 /* EditProfileView.swift */,
-				5EA4567C2AA924C6004C0A07 /* TimeZoneView.swift */,
-				5EA2474F2AB10291007D7CE4 /* OtherView.swift */,
-				5EA247512AB1059D007D7CE4 /* HelpView.swift */,
-				5EA247552AB107D8007D7CE4 /* ContactUsView.swift */,
-				5EA247572AB109D0007D7CE4 /* MemoriesVIew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 				5EA247562AB107D8007D7CE4 /* ContactUsView.swift in Sources */,
 				5EA4566D2A9E99C3004C0A07 /* ThreeDots.swift in Sources */,
 				5EC7A5D42AADCDE8006F133E /* Requests.swift in Sources */,
+				5E971FCA2AB25E4900E5EA9A /* NotificationsView.swift in Sources */,
 				5EA247542AB106C3007D7CE4 /* ChevronButtonView.swift in Sources */,
 				5EA4567B2AA71297004C0A07 /* Extensions.swift in Sources */,
 				5EA4566A2A9DD79D004C0A07 /* FeedCell.swift in Sources */,

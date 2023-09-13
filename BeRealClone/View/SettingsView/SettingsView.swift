@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct Settings: View {
+struct SettingsView: View {
     
     @State var width = UIScreen.main.bounds.width
+    
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView {
@@ -24,9 +26,14 @@ struct Settings: View {
                                 .fontWeight(.semibold)
                             
                             HStack {
-                                Image(systemName: "arrow.backward")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 20))
+                                Button {
+                                    dismiss()
+                                } label: {
+                                    Image(systemName: "arrow.backward")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 20))
+                                }
+
                                 
                                 Spacer()
                             }
@@ -38,7 +45,7 @@ struct Settings: View {
                     
                     VStack {
                         NavigationLink {
-                            
+                            EditProfile().navigationBarBackButtonHidden()
                         } label: {
                             RoundedRectangle(cornerRadius: 16)
                                 .frame(width: width * 0.9, height: 90)
@@ -86,29 +93,34 @@ struct Settings: View {
                                 Spacer()
                             }
                             
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .frame(width: width * 0.9, height: 45)
-                                    .foregroundColor(.white)
-                                    .opacity(0.07)
-                                
-                                HStack {
-                                    Image(systemName: "calendar")
+                            NavigationLink {
+                                MemoriesVIew().navigationBarBackButtonHidden()
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .frame(width: width * 0.9, height: 45)
                                         .foregroundColor(.white)
+                                        .opacity(0.07)
                                     
-                                    Text("Memories")
-                                        .foregroundColor(.white)
-                                        .fontWeight(.semibold)
-                                    
-                                    Spacer()
-                                    
-                                    Image(systemName: "chevron.right")
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 14))
+                                    HStack {
+                                        Image(systemName: "calendar")
+                                            .foregroundColor(.white)
+                                        
+                                        Text("Memories")
+                                            .foregroundColor(.white)
+                                            .fontWeight(.semibold)
+                                        
+                                        Spacer()
+                                        
+                                        Image(systemName: "chevron.right")
+                                            .foregroundColor(.gray)
+                                            .font(.system(size: 14))
+                                    }
+                                    .padding(.horizontal, width * 0.1)
+                                    .frame(height: 30)
                                 }
-                                .padding(.horizontal, width * 0.1)
-                                .frame(height: 30)
                             }
+
                         }
                         .padding(.top, 12)
                         
@@ -131,7 +143,7 @@ struct Settings: View {
                                 
                                 VStack {
                                     NavigationLink {
-                                        ContentView() // PLACEHOLDER
+                                        NotificationsView().navigationBarBackButtonHidden()
                                     } label: {
                                         HStack {
                                             Image(systemName: "square.and.pencil")
@@ -158,7 +170,7 @@ struct Settings: View {
                                         .foregroundColor(.gray)
                                     
                                     NavigationLink {
-                                        ContentView() // PLACEHOLDER
+                                        TimeZoneView().navigationBarBackButtonHidden()
                                     } label: {
                                         HStack {
                                             Image(systemName: "globe.europe.africa.fill")
@@ -185,7 +197,7 @@ struct Settings: View {
                                         .foregroundColor(.gray)
                                     
                                     NavigationLink {
-                                        ContentView() // PLACEHOLDER
+                                        OtherView().navigationBarBackButtonHidden()
                                     } label: {
                                         HStack {
                                             Image(systemName: "hammer.circle")
@@ -228,7 +240,7 @@ struct Settings: View {
                                 
                                 VStack {
                                     NavigationLink {
-                                        ContentView() // PLACEHOLDER
+                                        
                                     } label: {
                                         HStack {
                                             Image(systemName: "square.and.arrow.up")
@@ -255,7 +267,7 @@ struct Settings: View {
                                         .foregroundColor(.gray)
                                     
                                     NavigationLink {
-                                        ContentView() // PLACEHOLDER
+                                        
                                     } label: {
                                         HStack {
                                             Image(systemName: "star")
@@ -282,7 +294,7 @@ struct Settings: View {
                                         .foregroundColor(.gray)
                                     
                                     NavigationLink {
-                                        ContentView() // PLACEHOLDER
+                                        HelpView().navigationBarBackButtonHidden()
                                     } label: {
                                         HStack {
                                             Image(systemName: "lifepreserver")
@@ -308,7 +320,7 @@ struct Settings: View {
                                         .foregroundColor(.gray)
                                     
                                     NavigationLink {
-                                        ContentView() // PLACEHOLDER
+                                        
                                     } label: {
                                         HStack {
                                             Image(systemName: "info.circle")
@@ -367,6 +379,6 @@ struct Settings: View {
 
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
-        Settings()
+        SettingsView()
     }
 }

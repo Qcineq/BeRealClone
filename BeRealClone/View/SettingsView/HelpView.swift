@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HelpView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack {
             ZStack {
@@ -22,9 +25,14 @@ struct HelpView: View {
                             .fontWeight(.semibold)
                         
                         HStack {
-                            Image(systemName: "arrow.backward")
-                                .foregroundColor(.white)
-                                .font(.system(size: 20))
+                            Button {
+                                dismiss()
+                            } label: {
+                                Image(systemName: "arrow.backward")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 20))
+                            }
+
                             
                             Spacer()
                         }
@@ -38,7 +46,12 @@ struct HelpView: View {
                     
                     VStack(spacing: 16) {
                         
-                        ChevronButtonView(icon: "envelope", text: "Contac us")
+                        NavigationLink {
+                            ContactUsView().navigationBarBackButtonHidden()
+                        } label: {
+                            ChevronButtonView(icon: "envelope", text: "Contac us")
+                        }
+
                         
                         ChevronButtonView(icon: "questionmark.circle", text: "Help Center")
                         

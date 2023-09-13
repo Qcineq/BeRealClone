@@ -16,6 +16,8 @@ struct EditProfile: View {
     @State var bio = ""
     @State var location = ""
     
+    @Environment(\.dismiss) var dismiss
+    
     
     var body: some View {
         VStack {
@@ -27,8 +29,13 @@ struct EditProfile: View {
                 VStack {
                     ZStack {
                         HStack {
-                            Text("Cancel")
-                                .foregroundColor(.white)
+                            Button {
+                                dismiss()
+                            } label: {
+                                Text("Cancel")
+                                    .foregroundColor(.white)
+                            }
+
                             
                             Spacer()
                             

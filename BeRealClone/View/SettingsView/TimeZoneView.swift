@@ -11,6 +11,8 @@ struct TimeZoneView: View {
     
     @State var area = "europe"
     
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack {
             ZStack {
@@ -23,9 +25,14 @@ struct TimeZoneView: View {
                             .fontWeight(.semibold)
                         
                         HStack {
-                            Image(systemName: "arrow.backward")
-                                .foregroundColor(.white)
-                                .font(.system(size: 20))
+                            Button {
+                                dismiss()
+                            } label: {
+                                Image(systemName: "arrow.backward")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 20))
+                            }
+
                             
                             Spacer()
                         }
