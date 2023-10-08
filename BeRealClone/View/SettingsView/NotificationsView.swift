@@ -9,7 +9,28 @@ import SwiftUI
 
 struct NotificationsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack {
+                Color.black.ignoresSafeArea()
+                
+                VStack {
+                    ZStack {
+                        Text("Notifications")
+                            .fontWeight(.semibold)
+                        
+                        HStack {
+                            Image(systemName: "arrow.backward")
+                            
+                            Spacer()
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    Spacer()
+                }
+                .foregroundColor(.white)
+            }
+        }
     }
 }
 
