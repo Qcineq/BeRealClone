@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E4DC4F52AD47C41003AEA20 /* NotificationsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DC4F42AD47C41003AEA20 /* NotificationsButtonView.swift */; };
+		5E4DC4F72AD4818B003AEA20 /* WhiteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DC4F62AD4818B003AEA20 /* WhiteButtonView.swift */; };
 		5E971FCA2AB25E4900E5EA9A /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */; };
 		5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2474F2AB10291007D7CE4 /* OtherView.swift */; };
 		5EA247522AB1059D007D7CE4 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247512AB1059D007D7CE4 /* HelpView.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E4DC4F42AD47C41003AEA20 /* NotificationsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsButtonView.swift; sourceTree = "<group>"; };
+		5E4DC4F62AD4818B003AEA20 /* WhiteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButtonView.swift; sourceTree = "<group>"; };
 		5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		5EA2474F2AB10291007D7CE4 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
 		5EA247512AB1059D007D7CE4 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				5EC7A5D12AADCBF8006F133E /* FriendsCellView.swift */,
 				5EC7A5D32AADCDE8006F133E /* Requests.swift */,
 				5EA247532AB106C3007D7CE4 /* ChevronButtonView.swift */,
+				5E4DC4F42AD47C41003AEA20 /* NotificationsButtonView.swift */,
+				5E4DC4F62AD4818B003AEA20 /* WhiteButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC7A5C62AADBDFC006F133E /* LeftMenuView.swift in Sources */,
+				5E4DC4F52AD47C41003AEA20 /* NotificationsButtonView.swift in Sources */,
 				5EA456712AA141E1004C0A07 /* MemoryView.swift in Sources */,
 				5EA4565C2A9DD02C004C0A07 /* ContentView.swift in Sources */,
 				5EA456732AA53077004C0A07 /* SettingsView.swift in Sources */,
@@ -260,6 +267,7 @@
 				5EA4566A2A9DD79D004C0A07 /* FeedCell.swift in Sources */,
 				5EA456682A9DD12B004C0A07 /* FeedView.swift in Sources */,
 				5EA4565A2A9DD02C004C0A07 /* BeRealCloneApp.swift in Sources */,
+				5E4DC4F72AD4818B003AEA20 /* WhiteButtonView.swift in Sources */,
 				5EC7A5D22AADCBF8006F133E /* FriendsCellView.swift in Sources */,
 				5EA456782AA70C03004C0A07 /* EditProfileView.swift in Sources */,
 				5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */,
