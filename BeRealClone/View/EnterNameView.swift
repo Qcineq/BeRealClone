@@ -59,7 +59,7 @@ struct EnterNameView: View {
                         .onChange(of: name) { newValue in
                             if !newValue.isEmpty {
                                 buttonActive = true
-                            } else if newValue.isEmpty {
+                            } else {
                                 buttonActive = false
                             }
                         }
