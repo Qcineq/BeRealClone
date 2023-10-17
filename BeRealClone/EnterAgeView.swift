@@ -14,6 +14,9 @@ struct EnterAgeView: View {
     @State var month = ""
     @State var year = ""
     
+    @State var ageButtonClicked = false
+    @State var buttonActive = false
+    
     var body: some View {
         VStack {
             ZStack {
@@ -120,6 +123,32 @@ struct EnterAgeView: View {
                                     })
                                 
                             )
+                    }
+                    Spacer()
+                }
+                .padding(.top, 50)
+                
+                VStack {
+                    
+                    Spacer()
+                    
+                    Text("Only to make sure you're old enough to use BeReal.")
+                        .foregroundStyle(Color(red: 70/255, green: 70/255, blue: 73/255))
+                        .fontWeight(.semibold)
+                        .font(.system(size: 14))
+                    
+                    Button {
+                        print("button clicked")
+                    } label: {
+                        WhiteButtonView(buttonActive: $ageButtonClicked, text: "Continue")
+                            .onChange(of: month) { newValue in
+                                if !newValue.isEmpty {
+                                    buttonActive = true
+                                }
+                                else if newValue.isEmpty {
+                                    buttonActive = false
+                                }
+                            }
                     }
                 }
             }
