@@ -40,6 +40,8 @@
 		5EC7A5D02AADCADC006F133E /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7A5CF2AADCADC006F133E /* Friends.swift */; };
 		5EC7A5D22AADCBF8006F133E /* FriendsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7A5D12AADCBF8006F133E /* FriendsCellView.swift */; };
 		5EC7A5D42AADCDE8006F133E /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7A5D32AADCDE8006F133E /* Requests.swift */; };
+		5EFDC5F72AE5CB53001D8F8B /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDC5F62AE5CB53001D8F8B /* Country.swift */; };
+		5EFDC5F92AE5CE14001D8F8B /* SelectCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDC5F82AE5CE14001D8F8B /* SelectCountryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		5EC7A5CF2AADCADC006F133E /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		5EC7A5D12AADCBF8006F133E /* FriendsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCellView.swift; sourceTree = "<group>"; };
 		5EC7A5D32AADCDE8006F133E /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		5EFDC5F62AE5CB53001D8F8B /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		5EFDC5F82AE5CE14001D8F8B /* SelectCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				5EA456592A9DD02C004C0A07 /* BeRealCloneApp.swift */,
 				5EA4565B2A9DD02C004C0A07 /* ContentView.swift */,
 				5E4DC4FA2ADF34CD003AEA20 /* EnterAgeView.swift */,
+				5EFDC5F62AE5CB53001D8F8B /* Country.swift */,
+				5EFDC5F82AE5CE14001D8F8B /* SelectCountryView.swift */,
 				5E73DDFB2AE1DC8C0048B2E9 /* countries.json */,
 				5EA4565D2A9DD02D004C0A07 /* Assets.xcassets */,
 				5EA4565F2A9DD02D004C0A07 /* Preview Content */,
@@ -283,6 +289,7 @@
 				5EC7A5D42AADCDE8006F133E /* Requests.swift in Sources */,
 				5E971FCA2AB25E4900E5EA9A /* NotificationsView.swift in Sources */,
 				5EA247542AB106C3007D7CE4 /* ChevronButtonView.swift in Sources */,
+				5EFDC5F92AE5CE14001D8F8B /* SelectCountryView.swift in Sources */,
 				5EA4567B2AA71297004C0A07 /* Extensions.swift in Sources */,
 				5EA4566A2A9DD79D004C0A07 /* FeedCell.swift in Sources */,
 				5EA456682A9DD12B004C0A07 /* FeedView.swift in Sources */,
@@ -290,6 +297,7 @@
 				5E4DC4F72AD4818B003AEA20 /* WhiteButtonView.swift in Sources */,
 				5EC7A5D22AADCBF8006F133E /* FriendsCellView.swift in Sources */,
 				5EA456782AA70C03004C0A07 /* EditProfileView.swift in Sources */,
+				5EFDC5F72AE5CB53001D8F8B /* Country.swift in Sources */,
 				5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
