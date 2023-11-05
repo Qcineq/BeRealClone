@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E4728332AF7E2D000AA3EB1 /*  EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4728322AF7E2D000AA3EB1 /*  EnterPhoneNumberView.swift */; };
+		5E4728352AF7EE6C00AA3EB1 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4728342AF7EE6C00AA3EB1 /* EnterCodeView.swift */; };
 		5E4DC4F52AD47C41003AEA20 /* NotificationsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DC4F42AD47C41003AEA20 /* NotificationsButtonView.swift */; };
 		5E4DC4F72AD4818B003AEA20 /* WhiteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DC4F62AD4818B003AEA20 /* WhiteButtonView.swift */; };
 		5E4DC4F92AD5F31E003AEA20 /* EnterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DC4F82AD5F31E003AEA20 /* EnterNameView.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		5E4728322AF7E2D000AA3EB1 /*  EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " EnterPhoneNumberView.swift"; sourceTree = "<group>"; };
+		5E4728342AF7EE6C00AA3EB1 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		5E4DC4F42AD47C41003AEA20 /* NotificationsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsButtonView.swift; sourceTree = "<group>"; };
 		5E4DC4F62AD4818B003AEA20 /* WhiteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButtonView.swift; sourceTree = "<group>"; };
 		5E4DC4F82AD5F31E003AEA20 /* EnterNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				5E4DC4FA2ADF34CD003AEA20 /* EnterAgeView.swift */,
 				5EFDC5F82AE5CE14001D8F8B /* SelectCountryView.swift */,
 				5E4728322AF7E2D000AA3EB1 /*  EnterPhoneNumberView.swift */,
+				5E4728342AF7EE6C00AA3EB1 /* EnterCodeView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				5EA456782AA70C03004C0A07 /* EditProfileView.swift in Sources */,
 				5EFDC5F72AE5CB53001D8F8B /* Country.swift in Sources */,
 				5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */,
+				5E4728352AF7EE6C00AA3EB1 /* EnterCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
