@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectCountryView: View {
     
-    var countries: [Country] = Country.allCountries
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
@@ -24,7 +24,7 @@ struct SelectCountryView: View {
                         
                         HStack {
                             Button {
-                                
+                                dismiss()
                             } label: {
                                 Image(systemName: "xmark")
                                     .font(.system(size: 16))
@@ -33,10 +33,8 @@ struct SelectCountryView: View {
                             }
                             
                             Spacer()
-                            
                         }
                     }
-                    
                     Spacer()
                 }
                 .padding(.horizontal)
@@ -44,23 +42,27 @@ struct SelectCountryView: View {
                 VStack {
                     VStack {
                         List {
-                            
                             Section {
-                                ForEach(countries, id: \.isoCode) { country in
-                                    HStack {
-                                        Text("\(country.flag(country: country.isoCode))")
-                                    }
+                                HStack {
+                                    Image(systemName: "flag.fill")
+                                    Text("Country (+48)")
+                                }
+                                .onTapGesture {
+                                    dismiss()
                                 }
                             }
                         }
                     }
                 }
-                
+                .padding(.top, 50)
             }
+            .environment(\.colorScheme, .dark)
         }
     }
 }
 
-#Preview {
-    SelectCountryView()
+struct SelectCountryView_Previews: PreviewProvider {
+    static var previews: some View {
+        SelectCountryView()
+    }
 }
