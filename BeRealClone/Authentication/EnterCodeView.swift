@@ -11,6 +11,10 @@ import Combine
 struct EnterCodeView: View {
     
     @State var otpCode: String = ""
+    @State var buttonActive = false
+    @State var timeRemaining = 60
+    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
@@ -70,8 +74,37 @@ struct EnterCodeView: View {
                         Spacer()
                     }
                     
+                    
+                    VStack {
+                        Text("Change the phone number")
+                            .foregroundStyle(.gray)
+                            .font(.system(size: 14))
+                            .fontWeight(.bold)
+                        
+                        Button {
+                            
+                        } label: {
+                            WhiteButtonView(buttonActive: $buttonActive, text: otpCode.count == 6 ? "Continue" : "Resend in \(timeRemaining)s")
+                        }
+                        .disabled(buttonActive ? false : true)
+                        .onChange(of: otpCode) { newValue in
+                            if !newValue.isEmpty {
+                                buttonActive = true
+                            } else if newValue.isEmpty {
+                                buttonActive = false
+                            }
+                        }
+                    }
+                    
                 }
             }
+            .onReceive(timer, perform: { _ in
+                if timeRemaining > 0 {
+                    timeRemaining -= 1
+                } else {
+                    buttonActive = true
+                }
+            })
         }
     }
     
