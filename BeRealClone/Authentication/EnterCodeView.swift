@@ -16,6 +16,8 @@ struct EnterCodeView: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         VStack {
             ZStack {

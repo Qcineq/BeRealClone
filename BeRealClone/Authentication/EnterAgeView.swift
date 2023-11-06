@@ -14,8 +14,11 @@ struct EnterAgeView: View {
     @State var month = ""
     @State var year = ""
     
-    @State var ageButtonClicked = false
     @State var buttonActive = false
+    
+    @Binding var ageButtonClicked: Bool
+    
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
@@ -74,7 +77,7 @@ struct EnterAgeView: View {
                             .foregroundStyle(day.isEmpty ? Color(red: 70/255, green: 70/255, blue: 73/255) : Color.black)
                             .fontWeight(.heavy)
                             .font(.system(size: 40))
-                            .frame(width: 58)
+                            .frame(width: 60)
                             .overlay(
                                 
                                 TextField("", text: $day)
@@ -138,9 +141,13 @@ struct EnterAgeView: View {
                         .font(.system(size: 14))
                     
                     Button {
-                        print("button clicked")
+                        if buttonActive {
+                            self.ageButtonClicked = true
+                        } else {
+                            self.ageButtonClicked = false
+                        }
                     } label: {
-                        WhiteButtonView(buttonActive: $ageButtonClicked, text: "Continue")
+                        WhiteButtonView(buttonActive: $buttonActive, text: "Continue")
                             .onChange(of: month) { newValue in
                                 if !newValue.isEmpty {
                                     buttonActive = true
@@ -156,6 +163,6 @@ struct EnterAgeView: View {
     }
 }
 
-#Preview {
-    EnterAgeView()
-}
+//#Preview {
+//    EnterAgeView()
+//}

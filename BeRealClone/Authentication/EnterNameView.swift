@@ -12,6 +12,10 @@ struct EnterNameView: View {
     @State var name = ""
     @State var buttonActive = false
     
+    @Binding var nameButtonClicked: Bool
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         VStack {
             ZStack {
@@ -44,6 +48,8 @@ struct EnterNameView: View {
                                 TextField("", text: $name)
                                     .font(.system(size: 40))
                                     .fontWeight(.heavy)
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.white)
                             )
                     }
                     .foregroundColor(.white)
@@ -55,20 +61,28 @@ struct EnterNameView: View {
                 VStack {
                     Spacer()
                     
-                    WhiteButtonView(buttonActive: $buttonActive, text: "Continue")
-                        .onChange(of: name) { newValue in
-                            if !newValue.isEmpty {
-                                buttonActive = true
-                            } else {
-                                buttonActive = false
-                            }
+                    Button{
+                        if buttonActive {
+                            self.nameButtonClicked = true
+                        } else {
+                            self.nameButtonClicked = false
                         }
+                    } label: {
+                        WhiteButtonView(buttonActive: $buttonActive, text: "Continue")
+                            .onChange(of: name) { newValue in
+                                if !newValue.isEmpty {
+                                    buttonActive = true
+                                } else {
+                                    buttonActive = false
+                                }
+                            }
+                    }
                 }
             }
         }
     }
 }
 
-#Preview {
-    EnterNameView()
-}
+//#Preview {
+//    EnterNameView()
+//}

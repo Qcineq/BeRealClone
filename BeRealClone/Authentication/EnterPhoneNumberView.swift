@@ -7,11 +7,15 @@
 
 import SwiftUI
 
-struct _EnterPhoneNumberView: View {
+struct EnterPhoneNumberView: View {
     
     @State var showCountryList = false
     @State var phoneNumber = ""
     @State var buttonActive = false
+    
+    @Binding var phoneNumberButtonClicked: Bool
+    
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
@@ -113,6 +117,6 @@ struct _EnterPhoneNumberView: View {
     }
 }
 
-#Preview {
-    _EnterPhoneNumberView()
-}
+//#Preview {
+//    EnterPhoneNumberView()
+//}
