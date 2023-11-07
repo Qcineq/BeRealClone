@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EnterNameView: View {
     
-    @State var name = ""
+    @Binding var name: String
     @State var buttonActive = false
     
     @Binding var nameButtonClicked: Bool
