@@ -12,8 +12,8 @@ struct EnterCodeView: View {
     
     @State var otpCode: String = ""
     @State var buttonActive = false
-    @State var timeRemaining = 60
     
+    @State var timeRemaining = 60
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @EnvironmentObject var viewModel: AuthViewModel
