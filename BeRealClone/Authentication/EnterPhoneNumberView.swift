@@ -10,7 +10,6 @@ import SwiftUI
 struct EnterPhoneNumberView: View {
     
     @State var showCountryList = false
-    @State var phoneNumber = ""
     @State var buttonActive = false
     
     @Binding var phoneNumberButtonClicked: Bool
@@ -64,13 +63,13 @@ struct EnterPhoneNumberView: View {
                             }
                         
                         Text("Your Phone")
-                            .foregroundStyle(phoneNumber.isEmpty ? Color(red: 70/255, green: 70/255, blue: 73/255) : .black)
+                            .foregroundStyle(viewModel.phoneNumber.isEmpty ? Color(red: 70/255, green: 70/255, blue: 73/255) : .black)
                             .fontWeight(.heavy)
                             .font(.system(size: 40))
                             .frame(width: 220)
                             .overlay(
                                 
-                                TextField("", text: $phoneNumber)
+                                TextField("", text: $viewModel.phoneNumber)
                                     .foregroundStyle(.white)
                                     .font(.system(size: 40, weight: .heavy))
                             )
@@ -93,10 +92,13 @@ struct EnterPhoneNumberView: View {
                         .multilineTextAlignment(.center)
                     
                     Button {
-                        viewModel.sendOtp()
+                        Task {
+                            print("Button pressed")
+                            await viewModel.sendOtp()
+                        }
                     } label: {
                         WhiteButtonView(buttonActive: $buttonActive, text: "Continue")
-                            .onChange(of: phoneNumber) { newValue in
+                            .onChange(of: viewModel.phoneNumber) { newValue in
                                 if !newValue.isEmpty {
                                     buttonActive = true
                                 } else if newValue.isEmpty {
@@ -104,7 +106,7 @@ struct EnterPhoneNumberView: View {
                                 }
                             }
                     }
-                    .disabled(phoneNumber.isEmpty ? true : false)
+                    .disabled(viewModel.phoneNumber.isEmpty ? true : false)
                     
                 }
             }
@@ -112,9 +114,10 @@ struct EnterPhoneNumberView: View {
         .sheet(isPresented: $showCountryList) {
             SelectCountryView()
         }
-//        .overlay{
-//            ProgressView()
-//        }
+        .overlay{
+            ProgressView()
+                .opacity(viewModel.isLoading ? 1 : 0)
+        }
         .background {
             NavigationLink(tag: "VERIFICATION", selection: $viewModel.navigationTag) {
                 EnterCodeView()

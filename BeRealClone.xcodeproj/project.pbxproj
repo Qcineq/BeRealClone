@@ -44,7 +44,7 @@
 		5E5CC9332AFAF8F800A2F39A /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5E5CC9322AFAF8F800A2F39A /* FirebaseRemoteConfigSwift */; };
 		5E5CC9352AFAF8F800A2F39A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5E5CC9342AFAF8F800A2F39A /* FirebaseStorage */; };
 		5E5CC9372AFAF8F800A2F39A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5E5CC9362AFAF8F800A2F39A /* FirebaseStorageCombine-Community */; };
-		5E5CC9392AFAFA1A00A2F39A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CC9382AFAFA1A00A2F39A /* GoogleService-Info.plist */; };
+		5E5CC93B2AFB01FB00A2F39A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CC93A2AFB01FB00A2F39A /* GoogleService-Info.plist */; };
 		5E73DDFC2AE1DC8C0048B2E9 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E73DDFB2AE1DC8C0048B2E9 /* countries.json */; };
 		5E971FCA2AB25E4900E5EA9A /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */; };
 		5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2474F2AB10291007D7CE4 /* OtherView.swift */; };
@@ -87,7 +87,8 @@
 		5E4DC4F62AD4818B003AEA20 /* WhiteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButtonView.swift; sourceTree = "<group>"; };
 		5E4DC4F82AD5F31E003AEA20 /* EnterNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameView.swift; sourceTree = "<group>"; };
 		5E4DC4FA2ADF34CD003AEA20 /* EnterAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAgeView.swift; sourceTree = "<group>"; };
-		5E5CC9382AFAFA1A00A2F39A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E5CC93A2AFB01FB00A2F39A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E5CC93C2AFB035F00A2F39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5E73DDFB2AE1DC8C0048B2E9 /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		5EA2474F2AB10291007D7CE4 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
@@ -207,6 +208,8 @@
 		5EA456582A9DD02C004C0A07 /* BeRealClone */ = {
 			isa = PBXGroup;
 			children = (
+				5E5CC93C2AFB035F00A2F39A /* Info.plist */,
+				5E5CC93A2AFB01FB00A2F39A /* GoogleService-Info.plist */,
 				5EA456792AA7127F004C0A07 /* Extensions */,
 				5EA456742AA5307E004C0A07 /* View */,
 				5EA4566B2A9E99A9004C0A07 /* Components */,
@@ -217,7 +220,6 @@
 				5E47283A2AF8D73400AA3EB1 /* Year.swift */,
 				5EFDC5F62AE5CB53001D8F8B /* Country.swift */,
 				5E73DDFB2AE1DC8C0048B2E9 /* countries.json */,
-				5E5CC9382AFAFA1A00A2F39A /* GoogleService-Info.plist */,
 				5EA4565D2A9DD02D004C0A07 /* Assets.xcassets */,
 				5EA4565F2A9DD02D004C0A07 /* Preview Content */,
 			);
@@ -364,7 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E73DDFC2AE1DC8C0048B2E9 /* countries.json in Resources */,
-				5E5CC9392AFAFA1A00A2F39A /* GoogleService-Info.plist in Resources */,
+				5E5CC93B2AFB01FB00A2F39A /* GoogleService-Info.plist in Resources */,
 				5EA456612A9DD02D004C0A07 /* Preview Assets.xcassets in Resources */,
 				5EA4565E2A9DD02D004C0A07 /* Assets.xcassets in Resources */,
 			);
@@ -546,6 +548,7 @@
 				DEVELOPMENT_TEAM = 5H4L2XMW7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeRealClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -575,6 +578,7 @@
 				DEVELOPMENT_TEAM = 5H4L2XMW7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeRealClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
