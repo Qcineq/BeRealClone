@@ -49,4 +49,24 @@ class AuthViewModel: ObservableObject {
             self.showAlert = true
         }
     }
+    
+    func verifyOTP()async {
+        do {
+            isLoading = true
+            let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: otpText)
+            
+            let result = try await Auth.auth().signIn(with: credential)
+            
+            DispatchQueue.main.async {
+                self.isLoading = false
+                let user = result.user
+                print(user.uid)
+            }
+        }
+        catch {
+            print("ERROR")
+            handleError(error: error.localizedDescription)
+        }
+    }
+    
 }
