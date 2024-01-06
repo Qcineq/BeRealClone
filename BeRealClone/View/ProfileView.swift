@@ -11,6 +11,8 @@ struct ProfileView: View {
     
     @Binding var mainMenu: String
     
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         VStack {
             ZStack {
@@ -49,11 +51,23 @@ struct ProfileView: View {
                 }
                 
                 VStack {
-                    Image("profilePhoto")
-                        .resizable()
-                        .scaledToFit()
+//                    Image("profilePhoto")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 130, height: 130)
+//                        .cornerRadius(75)
+                    
+                    Circle()
                         .frame(width: 130, height: 130)
                         .cornerRadius(75)
+                        .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                        .overlay(
+                            
+                            Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                .foregroundColor(.white)
+                                .font(.system(size: 55))
+                        )
+                    
                     
                     Text("Kuba")
                         .foregroundColor(.white)

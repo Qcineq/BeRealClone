@@ -13,6 +13,8 @@ struct SettingsView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -54,11 +56,22 @@ struct SettingsView: View {
                                 .overlay(
                                     
                                     HStack {
-                                        Image("profilePhoto")
-                                            .resizable()
-                                            .scaledToFit()
+//                                        Image("profilePhoto")
+//                                            .resizable()
+//                                            .scaledToFit()
+//                                            .frame(width: 60, height: 60)
+//                                            .cornerRadius(30)
+                                        
+                                        Circle()
                                             .frame(width: 60, height: 60)
                                             .cornerRadius(30)
+                                            .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                            .overlay(
+                                                
+                                                Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                                    .foregroundColor(.white)
+                                                    .font(.system(size: 25))
+                                            )
                                         
                                         VStack(alignment: .leading) {
                                             Text("Kuba")
@@ -354,10 +367,17 @@ struct SettingsView: View {
                                 .opacity(0.07)
                             
                             HStack {
-                                Spacer()
-                                Text("Log Out")
-                                    .foregroundColor(.red)
-                                Spacer()
+                                
+                                Button(action: { AuthViewModel().signOut() }, label: {
+                                    Spacer()
+                                    Text("Log Out")
+                                        .foregroundColor(.red)
+                                    Spacer()
+                                })
+//                                Spacer()
+//                                Text("Log Out")
+//                                    .foregroundColor(.red)
+//                                Spacer()
                             }
                             .padding(.horizontal, width * 0.1)
                             .frame(height: 30)

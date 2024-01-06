@@ -18,6 +18,7 @@ struct EditProfile: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
@@ -63,11 +64,23 @@ struct EditProfile: View {
                 VStack {
                     VStack {
                         ZStack(alignment: .bottomTrailing) {
-                            Image("profilePhoto")
-                                .resizable()
-                                .scaledToFit()
+//                            Image("profilePhoto")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 120, height: 120)
+//                                .cornerRadius(60)
+                            
+                            Circle()
                                 .frame(width: 120, height: 120)
                                 .cornerRadius(60)
+                                .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                .overlay(
+                                    
+                                    Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 55))
+                                )
+                            
                             
                             ZStack {
                                 ZStack {

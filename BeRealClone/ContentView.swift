@@ -22,6 +22,8 @@ struct ContentView: View {
     
     @State var menu = "feed"
     
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         NavigationView {
             HStack(spacing: 0) {

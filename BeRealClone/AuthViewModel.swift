@@ -79,10 +79,11 @@ class AuthViewModel: ObservableObject {
                 }
             }
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 self.isLoading = false
                 let user = result.user
                 self.userSession = user
+                self.currentUser = User(name: name, date: year.date)
                 print(user.uid)
             }
         }
