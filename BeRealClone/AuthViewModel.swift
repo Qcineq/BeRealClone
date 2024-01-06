@@ -30,9 +30,14 @@ class AuthViewModel: ObservableObject {
     
     static let shared = AuthViewModel()
     
+    init() {
+        userSession = Auth.auth().currentUser
+        fetchUser()
+    }
+    
     func sendOtp() async {
         
-        if isLoading {return}
+        if isLoading { return }
         
         do {
             isLoading = true
@@ -84,6 +89,26 @@ class AuthViewModel: ObservableObject {
         catch {
             print("ERROR")
             handleError(error: error.localizedDescription)
+        }
+    }
+    
+    func signOut() {
+        self.userSession = nil
+        try? Auth.auth().signOut()
+    }
+    
+    func fetchUser() {
+        guard let uid = userSession?.uid else { return }
+        
+        Firestore.firestore().collection("users").document(uid).getDocument { snapshot, err in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            
+            guard let user = try? snapshot?.data(as: User.self) else { return }
+            self.currentUser
+            
         }
     }
     
