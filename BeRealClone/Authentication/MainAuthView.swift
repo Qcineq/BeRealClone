@@ -13,7 +13,7 @@ struct MainAuthView: View {
     @State private var ageButtonClicked = false
     @State private var phoneNumberButtonClicked = false
     
-    @StateObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         NavigationView {

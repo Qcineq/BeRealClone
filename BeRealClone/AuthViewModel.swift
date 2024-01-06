@@ -25,6 +25,11 @@ class AuthViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var showAlert = false
     
+    @Published var userSession: Firebase.User?
+    @Published var currentUser: User?
+    
+    static let shared = AuthViewModel()
+    
     func sendOtp() async {
         
         if isLoading {return}
@@ -57,9 +62,22 @@ class AuthViewModel: ObservableObject {
             
             let result = try await Auth.auth().signIn(with: credential)
             
+            let db = Firestore.firestore()
+            
+            db.collection("users").document(result.user.uid).setData([
+                "fullname" : name,
+                "date" : year.date,
+                "id" : result.user.uid
+            ]) { err in
+                if let err = err {
+                    print(err.localizedDescription)
+                }
+            }
+            
             DispatchQueue.main.async {
                 self.isLoading = false
                 let user = result.user
+                self.userSession = user
                 print(user.uid)
             }
         }
