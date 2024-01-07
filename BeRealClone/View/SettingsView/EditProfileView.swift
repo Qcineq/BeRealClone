@@ -11,14 +11,24 @@ struct EditProfile: View {
     
     @State var width = UIScreen.main.bounds.width
     
-    @State var fullName = ""
-    @State var userName = ""
-    @State var bio = ""
-    @State var location = ""
+    @State var fullName: String
+    @State var userName: String
+    @State var bio: String
+    @State var location: String
     
     @Environment(\.dismiss) var dismiss
     
+    let currentUser: User
+    
     @EnvironmentObject var viewModel: AuthViewModel
+    
+    init(currentUser: User) {
+        self.currentUser = currentUser
+        self._fullName = State(initialValue: currentUser.name)
+        self._bio = State(initialValue: currentUser.bio ?? "")
+        self._userName = State(initialValue: currentUser.username ?? "")
+        self._location = State(initialValue: currentUser.location ?? "")
+    }
     
     var body: some View {
         VStack {
@@ -40,8 +50,13 @@ struct EditProfile: View {
                             
                             Spacer()
                             
-                            Text("Save")
-                                .foregroundColor(.gray)
+                            Button(action: {
+                                saveData()
+                                dismiss()
+                            }, label: {
+                                Text("Save")
+                                    .foregroundColor(.gray)
+                            })
                         }
                         .padding(.horizontal, width * 0.05)
                         
@@ -123,7 +138,7 @@ struct EditProfile: View {
                                 TextField("", text: $fullName)
                                     .font(.system(size: 16))
                                     .placeholder(when: fullName.isEmpty) {
-                                        Text("Kuba").foregroundColor(.white)
+                                        Text(viewModel.currentUser!.name).foregroundColor(.white)
                                             .font(.system(size: 16))
                                     }
                                     .foregroundColor(.white)
@@ -245,10 +260,16 @@ struct EditProfile: View {
             }
         }
     }
-}
-
-struct EditProfile_Previews: PreviewProvider {
-    static var previews: some View {
-        EditProfile()
+    
+    func saveData() {
+        if viewModel.currentUser!.name != self.fullName && !self.fullName.isEmpty {
+            viewModel.currentUser!.name = self.fullName
+        }
     }
 }
+
+//struct EditProfile_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EditProfile()
+//    }
+//}
