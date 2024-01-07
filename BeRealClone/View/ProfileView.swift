@@ -63,18 +63,18 @@ struct ProfileView: View {
                         .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
                         .overlay(
                             
-                            Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                            Text(viewModel.currentUser?.name.prefix(1).uppercased() ?? "X")
                                 .foregroundColor(.white)
                                 .font(.system(size: 55))
                         )
                     
                     
-                    Text("Kuba")
+                    Text(viewModel.currentUser?.name ?? "No name")
                         .foregroundColor(.white)
                         .font(.system(size: 25))
                         .fontWeight(.bold)
                     
-                    Text("kuucin")
+                    Text(viewModel.currentUser?.username?.lowercased() ?? "No username")
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
                     

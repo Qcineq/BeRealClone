@@ -56,7 +56,7 @@ class AuthViewModel: ObservableObject {
         DispatchQueue.main.async {
             self.isLoading = false
             self.errorMessage = error
-            self.showAlert = true
+            self.showAlert.toggle()
         }
     }
     
@@ -70,7 +70,7 @@ class AuthViewModel: ObservableObject {
             let db = Firestore.firestore()
             
             db.collection("users").document(result.user.uid).setData([
-                "fullname" : name,
+                "name" : name,
                 "date" : year.date,
                 "id" : result.user.uid
             ]) { err in
@@ -108,8 +108,21 @@ class AuthViewModel: ObservableObject {
             }
             
             guard let user = try? snapshot?.data(as: User.self) else { return }
-            self.currentUser
+            self.currentUser = user
+            print("ERROR")
+            print(user)
             
+        }
+    }
+    
+    func saveUserData(data: [String : Any]) async {
+        guard let userId = userSession?.uid else { return }
+        
+        do {
+           try await Firestore.firestore().collection("users").document(userId).updateData(data as [String: Any])
+        }
+        catch {
+            handleError(error: error.localizedDescription)
         }
     }
     

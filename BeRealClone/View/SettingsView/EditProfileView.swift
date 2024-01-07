@@ -46,12 +46,12 @@ struct EditProfile: View {
                                 Text("Cancel")
                                     .foregroundColor(.white)
                             }
-
+                            
                             
                             Spacer()
                             
                             Button(action: {
-                                saveData()
+                                Task { await saveData()}
                                 dismiss()
                             }, label: {
                                 Text("Save")
@@ -79,11 +79,11 @@ struct EditProfile: View {
                 VStack {
                     VStack {
                         ZStack(alignment: .bottomTrailing) {
-//                            Image("profilePhoto")
-//                                .resizable()
-//                                .scaledToFit()
-//                                .frame(width: 120, height: 120)
-//                                .cornerRadius(60)
+                            //                            Image("profilePhoto")
+                            //                                .resizable()
+                            //                                .scaledToFit()
+                            //                                .frame(width: 120, height: 120)
+                            //                                .cornerRadius(60)
                             
                             Circle()
                                 .frame(width: 120, height: 120)
@@ -204,7 +204,7 @@ struct EditProfile: View {
                                         VStack {
                                             HStack {
                                                 
-                                                if bio.isEmpty {
+                                                if currentUser.bio == "" {
                                                     Text("Bio")
                                                         .foregroundColor(.gray)
                                                         .font(.system(size: 16))
@@ -261,9 +261,22 @@ struct EditProfile: View {
         }
     }
     
-    func saveData() {
+    func saveData() async {
         if viewModel.currentUser!.name != self.fullName && !self.fullName.isEmpty {
             viewModel.currentUser!.name = self.fullName
+            await viewModel.saveUserData(data: ["name" : self.fullName])
+        }
+        if viewModel.currentUser!.username != self.userName && !self.userName.isEmpty {
+            viewModel.currentUser!.username = self.userName
+            await viewModel.saveUserData(data: ["username" : self.userName])
+        }
+        if viewModel.currentUser!.bio != self.bio && !self.bio.isEmpty {
+            viewModel.currentUser!.bio = self.bio
+            await viewModel.saveUserData(data: ["bio" : bio])
+        }
+        if viewModel.currentUser!.location != self.location && !self.location.isEmpty {
+            viewModel.currentUser!.location = self.location
+            await viewModel.saveUserData(data: ["location" : location])
         }
     }
 }
