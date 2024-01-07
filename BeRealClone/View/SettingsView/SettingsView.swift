@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SettingsView: View {
     
@@ -35,7 +36,7 @@ struct SettingsView: View {
                                         .foregroundColor(.white)
                                         .font(.system(size: 20))
                                 }
-
+                                
                                 
                                 Spacer()
                             }
@@ -62,16 +63,24 @@ struct SettingsView: View {
 //                                            .frame(width: 60, height: 60)
 //                                            .cornerRadius(30)
                                         
-                                        Circle()
-                                            .frame(width: 60, height: 60)
-                                            .cornerRadius(30)
-                                            .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
-                                            .overlay(
-                                                
-                                                Text(viewModel.currentUser!.name.prefix(1).uppercased())
-                                                    .foregroundColor(.white)
-                                                    .font(.system(size: 25))
-                                            )
+                                        if let profileImageUrl = viewModel.currentUser!.profileImageUrl {
+                                            KFImage(URL(string: profileImageUrl))
+                                                .resizable()
+                                                .frame(width: 60, height: 60)
+                                                .cornerRadius(30)
+                                            
+                                        } else {
+                                            Circle()
+                                                .frame(width: 60, height: 60)
+                                                .cornerRadius(30)
+                                                .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                                .overlay(
+                                                    
+                                                    Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                                        .foregroundColor(.white)
+                                                        .font(.system(size: 25))
+                                                )
+                                        }
                                         
                                         VStack(alignment: .leading) {
                                             Text(viewModel.currentUser?.name ?? "No name")
@@ -93,7 +102,7 @@ struct SettingsView: View {
                                         .padding(.horizontal, 18)
                                 )
                         }
-
+                        
                         
                         VStack(spacing: 6) {
                             HStack {
@@ -133,7 +142,7 @@ struct SettingsView: View {
                                     .frame(height: 30)
                                 }
                             }
-
+                            
                         }
                         .padding(.top, 12)
                         
@@ -152,7 +161,7 @@ struct SettingsView: View {
                                 RoundedRectangle(cornerRadius: 14)
                                     .frame(width: width * 0.9, height: 145)
                                     .foregroundColor(.white)
-                                .opacity(0.07)
+                                    .opacity(0.07)
                                 
                                 VStack {
                                     NavigationLink {
@@ -175,7 +184,7 @@ struct SettingsView: View {
                                         .padding(.horizontal, width * 0.1)
                                         .frame(height: 30)
                                     }
-
+                                    
                                     
                                     Rectangle()
                                         .frame(width: width * 0.9, height: 0.3)
@@ -202,7 +211,7 @@ struct SettingsView: View {
                                         .padding(.horizontal, width * 0.1)
                                         .frame(height: 30)
                                     }
-
+                                    
                                     
                                     Rectangle()
                                         .frame(width: width * 0.9, height: 0.3)
@@ -249,7 +258,7 @@ struct SettingsView: View {
                                 RoundedRectangle(cornerRadius: 14)
                                     .frame(width: width * 0.9, height: 190)
                                     .foregroundColor(.white)
-                                .opacity(0.07)
+                                    .opacity(0.07)
                                 
                                 VStack {
                                     NavigationLink {
@@ -272,7 +281,7 @@ struct SettingsView: View {
                                         .padding(.horizontal, width * 0.1)
                                         .frame(height: 30)
                                     }
-
+                                    
                                     
                                     Rectangle()
                                         .frame(width: width * 0.9, height: 0.3)
@@ -299,7 +308,7 @@ struct SettingsView: View {
                                         .padding(.horizontal, width * 0.1)
                                         .frame(height: 30)
                                     }
-
+                                    
                                     
                                     Rectangle()
                                         .frame(width: width * 0.9, height: 0.3)

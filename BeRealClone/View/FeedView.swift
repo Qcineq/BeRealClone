@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct FeedView: View {
     
@@ -101,16 +102,23 @@ struct FeedView: View {
                                 }
                             } label: {
                                 
-                                Circle()
-                                    .frame(width: 35, height: 35)
-                                    .cornerRadius(17.5)
-                                    .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
-                                    .overlay(
-                                        
-                                        Text(viewModel.currentUser?.name.prefix(1).uppercased() ?? "X")
-                                            .foregroundColor(.white)
-                                            .font(.system(size: 15))
-                                    )
+                                if let profileImageUrl = viewModel.currentUser?.profileImageUrl {
+                                    KFImage(URL(string: profileImageUrl))
+                                        .resizable()
+                                        .frame(width: 35, height: 35)
+                                        .cornerRadius(17.5)
+                                } else {
+                                    Circle()
+                                        .frame(width: 35, height: 35)
+                                        .cornerRadius(17.5)
+                                        .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                        .overlay(
+                                            
+                                            Text(viewModel.currentUser?.name.prefix(1).uppercased() ?? "X")
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 15))
+                                        )
+                                }
                                 
 //                                Image("profilePhoto")
 //                                    .resizable()

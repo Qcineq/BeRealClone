@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct EditProfile: View {
     
@@ -93,7 +94,15 @@ struct EditProfile: View {
 //                                    .frame(width: 120, height: 120)
 //                                    .cornerRadius(60)
                                 
-                                if let image = profileImage {
+                                if currentUser.profileImageUrl != nil && profileImage == nil {
+                                    if let profileImageUrl = currentUser.profileImageUrl {
+                                        KFImage(URL(string: profileImageUrl))
+                                            .resizable()
+                                            .frame(width: 120, height: 120)
+                                            .cornerRadius(60)
+                                    }
+                                }
+                                else if let image = profileImage {
                                     image
                                         .resizable()
                                         .frame(width: 120, height: 120)
@@ -300,6 +309,19 @@ struct EditProfile: View {
         if viewModel.currentUser!.location != self.location && !self.location.isEmpty {
             viewModel.currentUser!.location = self.location
             await viewModel.saveUserData(data: ["location" : location])
+        }
+        if selectedImage != nil {
+            viewModel.uploadProfileImage(image: selectedImage!) { url in
+                do {
+                    Task {
+                        viewModel.currentUser!.profileImageUrl = url
+                        await viewModel.saveUserData(data: ["profileImageUrl" : url])
+                    }
+                }
+                catch {
+                    print(error.localizedDescription)
+                }
+            }
         }
     }
     
