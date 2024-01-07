@@ -22,6 +22,11 @@ struct EditProfile: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
     
+    @State var imagePickerPresented = false
+    
+    @State private var selectedImage: UIImage?
+    @State var profileImage: Image?
+    
     init(currentUser: User) {
         self.currentUser = currentUser
         self._fullName = State(initialValue: currentUser.name)
@@ -78,42 +83,60 @@ struct EditProfile: View {
                 
                 VStack {
                     VStack {
-                        ZStack(alignment: .bottomTrailing) {
-                            //                            Image("profilePhoto")
-                            //                                .resizable()
-                            //                                .scaledToFit()
-                            //                                .frame(width: 120, height: 120)
-                            //                                .cornerRadius(60)
-                            
-                            Circle()
-                                .frame(width: 120, height: 120)
-                                .cornerRadius(60)
-                                .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
-                                .overlay(
-                                    
-                                    Text(viewModel.currentUser!.name.prefix(1).uppercased())
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 55))
-                                )
-                            
-                            
-                            ZStack {
-                                ZStack {
+                        Button(action: {
+                            self.imagePickerPresented.toggle()
+                        }, label: {
+                            ZStack(alignment: .bottomTrailing) {
+//                                Image("profilePhoto")
+//                                    .resizable()
+//                                    .scaledToFit()
+//                                    .frame(width: 120, height: 120)
+//                                    .cornerRadius(60)
+                                
+                                if let image = profileImage {
+                                    image
+                                        .resizable()
+                                        .frame(width: 120, height: 120)
+                                        .cornerRadius(60)
+                                } else {
                                     Circle()
-                                        .frame(width: 34, height: 34)
-                                        .foregroundColor(.black)
-                                    Circle()
-                                        .frame(width: 30, height: 30)
-                                        .foregroundColor(.white)
-                                    Circle()
-                                        .frame(width: 34, height: 34)
-                                        .foregroundColor(.black)
-                                        .opacity(0.1)
+                                        .frame(width: 120, height: 120)
+                                        .cornerRadius(60)
+                                        .foregroundColor(Color(red: 152/255, green: 163/255, blue: 16/255))
+                                        .overlay(
+                                            
+                                            Text(viewModel.currentUser!.name.prefix(1).uppercased())
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 55))
+                                        )
                                 }
-                                Image(systemName: "camera.fill")
-                                    .font(.system(size: 16))
-                                    .shadow(color: .white, radius: 1, x: 1, y: 1)
+                                
+                                
+                                ZStack {
+                                    ZStack {
+                                        Circle()
+                                            .frame(width: 34, height: 34)
+                                            .foregroundColor(.black)
+                                        Circle()
+                                            .frame(width: 30, height: 30)
+                                            .foregroundColor(.white)
+                                        Circle()
+                                            .frame(width: 34, height: 34)
+                                            .foregroundColor(.black)
+                                            .opacity(0.1)
+                                    }
+                                    Image(systemName: "camera.fill")
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 16))
+                                        .shadow(color: .white, radius: 1, x: 1, y: 1)
+                                }
                             }
+                        })
+                        .sheet(isPresented: $imagePickerPresented) {
+                            loadImage()
+                        } content: {
+                            ImagePicker(image: $selectedImage)
+
                         }
                     }
                     
@@ -279,6 +302,12 @@ struct EditProfile: View {
             await viewModel.saveUserData(data: ["location" : location])
         }
     }
+    
+    func loadImage() {
+        guard let selectedImage = selectedImage else { return }
+        profileImage = Image(uiImage: selectedImage)
+    }
+    
 }
 
 //struct EditProfile_Previews: PreviewProvider {

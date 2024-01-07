@@ -48,6 +48,8 @@
 		5E5CC9372AFAF8F800A2F39A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5E5CC9362AFAF8F800A2F39A /* FirebaseStorageCombine-Community */; };
 		5E5CC93B2AFB01FB00A2F39A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CC93A2AFB01FB00A2F39A /* GoogleService-Info.plist */; };
 		5E73DDFC2AE1DC8C0048B2E9 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E73DDFB2AE1DC8C0048B2E9 /* countries.json */; };
+		5E9338A42B4B4F950087107A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9338A32B4B4F950087107A /* ImageUploader.swift */; };
+		5E9338A62B4B55AC0087107A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9338A52B4B55AC0087107A /* ImagePicker.swift */; };
 		5E971FCA2AB25E4900E5EA9A /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */; };
 		5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2474F2AB10291007D7CE4 /* OtherView.swift */; };
 		5EA247522AB1059D007D7CE4 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247512AB1059D007D7CE4 /* HelpView.swift */; };
@@ -94,6 +96,8 @@
 		5E5CC93A2AFB01FB00A2F39A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E5CC93C2AFB035F00A2F39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5E73DDFB2AE1DC8C0048B2E9 /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		5E9338A32B4B4F950087107A /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		5E9338A52B4B55AC0087107A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5E971FC92AB25E4900E5EA9A /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		5EA2474F2AB10291007D7CE4 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
 		5EA247512AB1059D007D7CE4 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				5EFDC5F62AE5CB53001D8F8B /* Country.swift */,
 				5E4CCB272B498C9800807E6D /* User.swift */,
 				5E4CCB292B498EF300807E6D /* MainView.swift */,
+				5E9338A32B4B4F950087107A /* ImageUploader.swift */,
 				5E73DDFB2AE1DC8C0048B2E9 /* countries.json */,
 				5EA4565D2A9DD02D004C0A07 /* Assets.xcassets */,
 				5EA4565F2A9DD02D004C0A07 /* Preview Content */,
@@ -275,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				5EA4567A2AA71297004C0A07 /* Extensions.swift */,
+				5E9338A52B4B55AC0087107A /* ImagePicker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 				5E4DC4FB2ADF34CD003AEA20 /* EnterAgeView.swift in Sources */,
 				5EA456712AA141E1004C0A07 /* MemoryView.swift in Sources */,
 				5EA4565C2A9DD02C004C0A07 /* ContentView.swift in Sources */,
+				5E9338A42B4B4F950087107A /* ImageUploader.swift in Sources */,
 				5E4CCB2A2B498EF300807E6D /* MainView.swift in Sources */,
 				5EA456732AA53077004C0A07 /* SettingsView.swift in Sources */,
 				5EA4567D2AA924C6004C0A07 /* TimeZoneView.swift in Sources */,
@@ -421,6 +428,7 @@
 				5EC7A5D22AADCBF8006F133E /* FriendsCellView.swift in Sources */,
 				5EA456782AA70C03004C0A07 /* EditProfileView.swift in Sources */,
 				5EFDC5F72AE5CB53001D8F8B /* Country.swift in Sources */,
+				5E9338A62B4B55AC0087107A /* ImagePicker.swift in Sources */,
 				5EA247502AB10291007D7CE4 /* OtherView.swift in Sources */,
 				5E4728352AF7EE6C00AA3EB1 /* EnterCodeView.swift in Sources */,
 			);
