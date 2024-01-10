@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3D75452B4E855F007AB68A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3D75442B4E855F007AB68A /* CameraView.swift */; };
 		5E4728332AF7E2D000AA3EB1 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4728322AF7E2D000AA3EB1 /* EnterPhoneNumberView.swift */; };
 		5E4728352AF7EE6C00AA3EB1 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4728342AF7EE6C00AA3EB1 /* EnterCodeView.swift */; };
 		5E4728372AF8D1CB00AA3EB1 /* MainAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4728362AF8D1CB00AA3EB1 /* MainAuthView.swift */; };
@@ -83,6 +84,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E3D75442B4E855F007AB68A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		5E4728322AF7E2D000AA3EB1 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
 		5E4728342AF7EE6C00AA3EB1 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		5E4728362AF8D1CB00AA3EB1 /* MainAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAuthView.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				5E4CCB272B498C9800807E6D /* User.swift */,
 				5E4CCB292B498EF300807E6D /* MainView.swift */,
 				5E9338A32B4B4F950087107A /* ImageUploader.swift */,
+				5E3D75442B4E855F007AB68A /* CameraView.swift */,
 				5E73DDFB2AE1DC8C0048B2E9 /* countries.json */,
 				5EA4565D2A9DD02D004C0A07 /* Assets.xcassets */,
 				5EA4565F2A9DD02D004C0A07 /* Preview Content */,
@@ -404,6 +407,7 @@
 				5E4CCB2A2B498EF300807E6D /* MainView.swift in Sources */,
 				5EA456732AA53077004C0A07 /* SettingsView.swift in Sources */,
 				5EA4567D2AA924C6004C0A07 /* TimeZoneView.swift in Sources */,
+				5E3D75452B4E855F007AB68A /* CameraView.swift in Sources */,
 				5EC7A5C82AADBE2A006F133E /* LeftMenuTopView.swift in Sources */,
 				5EC7A5CE2AADC74C006F133E /* SuggestionCellView.swift in Sources */,
 				5EC7A5CC2AADC5AB006F133E /* Suggestions.swift in Sources */,
