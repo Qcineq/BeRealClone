@@ -14,7 +14,8 @@ struct BeRealCloneApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            MainView().environmentObject(AuthViewModel.shared)
+            CameraView()
+//            MainView().environmentObject(AuthViewModel.shared)
         }
     }
 }

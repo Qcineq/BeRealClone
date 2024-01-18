@@ -11,6 +11,12 @@ struct CameraView: View {
     
     @State var switchingCamera = false
     
+    @State var takePhotoClick = false
+    
+    @State var selectedBackImage: UIImage?
+    
+    @State var backImage: Image?
+    
     var body: some View {
         VStack {
             ZStack {
@@ -34,18 +40,42 @@ struct CameraView: View {
                         .font(.system(size: 20))
                         .fontWeight(.heavy)
                     
-                    RoundedRectangle(cornerRadius: 12)
-                        .foregroundColor(.gray)
-                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.6)
-                        .overlay(
-                            
-                            VStack {
-                                ProgressView()
-                                Text("Wait, wait, wait, now smile")
+                    if let image = backImage {
+                        image
+                            .resizable()
+                            .cornerRadius(12)
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.6)
+                            .scaledToFit()
+                            .overlay(
+                                
+                                VStack {
+                                    ProgressView()
+                                    Text("Wait, wait, wait, now smile")
+                                }
+                                    .foregroundStyle(.white)
+                                    .opacity(self.switchingCamera ? 1 : 0)
+                            )
+                        
+                    } else {
+                        RoundedRectangle(cornerRadius: 12)
+                            .foregroundColor(.gray)
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.6)
+                            .overlay(
+                                
+                                VStack {
+                                    ProgressView()
+                                    Text("Wait, wait, wait, now smile")
+                                }
+                                    .foregroundStyle(.white)
+                                    .opacity(self.switchingCamera ? 1 : 0)
+                            )
+                            .sheet(isPresented: $takePhotoClick) {
+                                loadBackImage()
+                                
+                            } content: {
+                                ImagePicker(image: $selectedBackImage)
                             }
-                                .foregroundStyle(.white)
-                                .opacity(self.switchingCamera ? 1 : 0)
-                        )
+                    }
                     
                     VStack {
                         HStack(alignment: .center, spacing: 18) {
@@ -53,7 +83,7 @@ struct CameraView: View {
                                 .font(.system(size: 28))
                             
                             Button {
-                                
+                                self.takePhotoClick.toggle()
                             } label: {
                                 Image(systemName: "circle")
                                     .font(.system(size: 70))
@@ -70,6 +100,11 @@ struct CameraView: View {
                 .padding(.top, 50)
             }
         }
+    }
+    
+    func loadBackImage() {
+        guard let selectedBackImage = selectedBackImage else { return }
+        backImage = Image(uiImage: selectedBackImage)
     }
 }
 
