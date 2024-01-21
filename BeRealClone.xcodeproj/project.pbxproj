@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5E076C192B5BD6CB009C7D67 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E076C182B5BD6CB009C7D67 /* CameraViewModel.swift */; };
+		5E076C222B5BE642009C7D67 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E076C212B5BE642009C7D67 /* FeedViewModel.swift */; };
+		5E076C242B5BE6FF009C7D67 /* BeReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E076C232B5BE6FF009C7D67 /* BeReal.swift */; };
+		5E076C262B5BF243009C7D67 /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E076C252B5BF243009C7D67 /* FeedCellViewModel.swift */; };
+		5E076C2A2B5D4AF0009C7D67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E076C292B5D4AEF009C7D67 /* GoogleService-Info.plist */; };
 		5E3D75452B4E855F007AB68A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3D75442B4E855F007AB68A /* CameraView.swift */; };
 		5E4728332AF7E2D000AA3EB1 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4728322AF7E2D000AA3EB1 /* EnterPhoneNumberView.swift */; };
 		5E4728352AF7EE6C00AA3EB1 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4728342AF7EE6C00AA3EB1 /* EnterCodeView.swift */; };
@@ -48,7 +52,6 @@
 		5E5CC9332AFAF8F800A2F39A /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5E5CC9322AFAF8F800A2F39A /* FirebaseRemoteConfigSwift */; };
 		5E5CC9352AFAF8F800A2F39A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5E5CC9342AFAF8F800A2F39A /* FirebaseStorage */; };
 		5E5CC9372AFAF8F800A2F39A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5E5CC9362AFAF8F800A2F39A /* FirebaseStorageCombine-Community */; };
-		5E5CC93B2AFB01FB00A2F39A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CC93A2AFB01FB00A2F39A /* GoogleService-Info.plist */; };
 		5E73DDFC2AE1DC8C0048B2E9 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E73DDFB2AE1DC8C0048B2E9 /* countries.json */; };
 		5E9338A42B4B4F950087107A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9338A32B4B4F950087107A /* ImageUploader.swift */; };
 		5E9338A62B4B55AC0087107A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9338A52B4B55AC0087107A /* ImagePicker.swift */; };
@@ -86,6 +89,10 @@
 
 /* Begin PBXFileReference section */
 		5E076C182B5BD6CB009C7D67 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		5E076C212B5BE642009C7D67 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		5E076C232B5BE6FF009C7D67 /* BeReal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeReal.swift; sourceTree = "<group>"; };
+		5E076C252B5BF243009C7D67 /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
+		5E076C292B5D4AEF009C7D67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E3D75442B4E855F007AB68A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		5E4728322AF7E2D000AA3EB1 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
 		5E4728342AF7EE6C00AA3EB1 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
@@ -98,7 +105,6 @@
 		5E4DC4F62AD4818B003AEA20 /* WhiteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButtonView.swift; sourceTree = "<group>"; };
 		5E4DC4F82AD5F31E003AEA20 /* EnterNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameView.swift; sourceTree = "<group>"; };
 		5E4DC4FA2ADF34CD003AEA20 /* EnterAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAgeView.swift; sourceTree = "<group>"; };
-		5E5CC93A2AFB01FB00A2F39A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E5CC93C2AFB035F00A2F39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E73DDFB2AE1DC8C0048B2E9 /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		5E9338A32B4B4F950087107A /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 				5E47283A2AF8D73400AA3EB1 /* Year.swift */,
 				5EFDC5F62AE5CB53001D8F8B /* Country.swift */,
 				5E4CCB272B498C9800807E6D /* User.swift */,
+				5E076C232B5BE6FF009C7D67 /* BeReal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +197,8 @@
 			children = (
 				5E4728382AF8D6F500AA3EB1 /* AuthViewModel.swift */,
 				5E076C182B5BD6CB009C7D67 /* CameraViewModel.swift */,
+				5E076C212B5BE642009C7D67 /* FeedViewModel.swift */,
+				5E076C252B5BF243009C7D67 /* FeedCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,8 +310,8 @@
 		5EA456582A9DD02C004C0A07 /* BeRealClone */ = {
 			isa = PBXGroup;
 			children = (
+				5E076C292B5D4AEF009C7D67 /* GoogleService-Info.plist */,
 				5E5CC93C2AFB035F00A2F39A /* Info.plist */,
-				5E5CC93A2AFB01FB00A2F39A /* GoogleService-Info.plist */,
 				5E73DDFB2AE1DC8C0048B2E9 /* countries.json */,
 				5EA456592A9DD02C004C0A07 /* BeRealCloneApp.swift */,
 				5E076C1C2B5BE0D5009C7D67 /* Helpers */,
@@ -428,7 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E73DDFC2AE1DC8C0048B2E9 /* countries.json in Resources */,
-				5E5CC93B2AFB01FB00A2F39A /* GoogleService-Info.plist in Resources */,
+				5E076C2A2B5D4AF0009C7D67 /* GoogleService-Info.plist in Resources */,
 				5EA456612A9DD02D004C0A07 /* Preview Assets.xcassets in Resources */,
 				5EA4565E2A9DD02D004C0A07 /* Assets.xcassets in Resources */,
 			);
@@ -452,6 +461,7 @@
 				5EA4567D2AA924C6004C0A07 /* TimeZoneView.swift in Sources */,
 				5E3D75452B4E855F007AB68A /* CameraView.swift in Sources */,
 				5EC7A5C82AADBE2A006F133E /* LeftMenuTopView.swift in Sources */,
+				5E076C262B5BF243009C7D67 /* FeedCellViewModel.swift in Sources */,
 				5E076C192B5BD6CB009C7D67 /* CameraViewModel.swift in Sources */,
 				5EC7A5CE2AADC74C006F133E /* SuggestionCellView.swift in Sources */,
 				5EC7A5CC2AADC5AB006F133E /* Suggestions.swift in Sources */,
@@ -465,7 +475,9 @@
 				5EA4566D2A9E99C3004C0A07 /* ThreeDots.swift in Sources */,
 				5E4DC4F92AD5F31E003AEA20 /* EnterNameView.swift in Sources */,
 				5E4728332AF7E2D000AA3EB1 /* EnterPhoneNumberView.swift in Sources */,
+				5E076C222B5BE642009C7D67 /* FeedViewModel.swift in Sources */,
 				5EC7A5D42AADCDE8006F133E /* Requests.swift in Sources */,
+				5E076C242B5BE6FF009C7D67 /* BeReal.swift in Sources */,
 				5E971FCA2AB25E4900E5EA9A /* NotificationsView.swift in Sources */,
 				5E47283B2AF8D73400AA3EB1 /* Year.swift in Sources */,
 				5E4CCB282B498C9800807E6D /* User.swift in Sources */,

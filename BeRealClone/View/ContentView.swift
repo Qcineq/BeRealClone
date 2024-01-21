@@ -30,7 +30,7 @@ struct ContentView: View {
                 LeftMenuView(mainMenu: $menu)
                     .frame(width: width)
                 
-                FeedView(mainMenu: $menu)
+                FeedView(feedModel: FeedViewModel(user: viewModel.currentUser!), menu: $menu)
                     .frame(width: width)
                 
                 ProfileView(mainMenu: $menu)

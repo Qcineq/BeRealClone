@@ -377,7 +377,7 @@ struct SettingsView: View {
                             
                             HStack {
                                 
-                                Button(action: { AuthViewModel().signOut() }, label: {
+                                Button(action: { AuthViewModel.shared.signOut() }, label: {
                                     Spacer()
                                     Text("Log Out")
                                         .foregroundColor(.red)

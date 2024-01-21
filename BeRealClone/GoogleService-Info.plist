@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBRMEUygEz6gKLcwzQeLRKsaYXlDY7j7FU</string>
+	<string>AIzaSyBUpuNdV9Pxc2lMU_BiEycVgpexek5dkcc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>944317888113</string>
+	<string>794629270109</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.kuba.BeRealClone</string>
 	<key>PROJECT_ID</key>
-	<string>bereal-clone-b3409</string>
+	<string>bereal-3f6a8</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bereal-clone-b3409.appspot.com</string>
+	<string>bereal-3f6a8.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:944317888113:ios:f89c392f06327565c88dd0</string>
+	<string>1:794629270109:ios:a74c636bf5502173053bb4</string>
 </dict>
 </plist>
