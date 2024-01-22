@@ -11,6 +11,7 @@ import Firebase
 class FeedViewModel: ObservableObject {
     
     @Published var bereals = [BeReal]()
+    @Published var bereal = BeReal(username: "", frontImgaeUrl: "", backImgaeUrl: "", userId: "")
     
     @Published var blur = true
     
@@ -25,6 +26,11 @@ class FeedViewModel: ObservableObject {
         self.user = user
         
         Task {
+            
+            if let userId = AuthViewModel.shared.currentUser?.id {
+                await fetchOwnPost(date: dateString, userId: userId)
+            }
+            
             await fetchData(date: dateString)
         }
         
@@ -42,4 +48,16 @@ class FeedViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
+    func fetchOwnPost(date: String, userId: String) async {
+        let db = Firestore.firestore()
+        
+        do {
+            let data = try await db.collection("posts").document(date).collection("bereals").document(userId).getDocument()
+            self.bereal = try data.data(as: BeReal.self)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
 }

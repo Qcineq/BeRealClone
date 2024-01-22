@@ -34,45 +34,51 @@ struct FeedView: View {
                     
                     ScrollView {
                         VStack {
-                            VStack {
-                                ZStack {
-                                    VStack(alignment: .leading) {
-                                        Image("mainCam")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .cornerRadius(5)
+                            
+                            if !feedModel.blur {
+                                VStack {
+                                    VStack {
+                                        ZStack {
+                                            VStack(alignment: .leading) {
+                                                KFImage(URL(string: feedModel.bereal.backImgaeUrl))
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .cornerRadius(5)
+                                            }
+                                            
+                                            VStack {
+                                                HStack {
+                                                    KFImage(URL(string: feedModel.bereal.frontImgaeUrl))
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .border(.black)
+                                                        .cornerRadius(2)
+                                                        .frame(width: 20, height: 40)
+                                                        .padding(.leading)
+                                                    Spacer()
+                                                }
+                                                .padding(.top, 18)
+                                                Spacer()
+                                            }
+                                        }
+                                        .frame(width: 100)
                                     }
                                     
                                     VStack {
+                                        Text("Add a caption...")
+                                            .foregroundColor(.white)
+                                            .fontWeight(.semibold)
+                                        Text("View Comment")
+                                            .foregroundColor(.gray)
+                                        
                                         HStack {
-                                            Image("frontCam")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .border(.black)
-                                                .cornerRadius(2)
-                                                .frame(width: 20, height: 40)
-                                                .padding(.leading)
-                                            Spacer()
+                                            Text("Warszawa, Bemowo • 1 hr late")
+                                                .foregroundColor(.gray)
+                                                .font(.system(size: 12))
+                                            ThreeDots(size: 3, color: .gray)
                                         }
-                                        .padding(.top, 18)
-                                        Spacer()
                                     }
-                                }
-                                .frame(width: 100)
-                            }
-                            
-                            VStack {
-                                Text("Add a caption...")
-                                    .foregroundColor(.white)
-                                    .fontWeight(.semibold)
-                                Text("View Comment")
-                                    .foregroundColor(.gray)
-                                
-                                HStack {
-                                    Text("Warszawa, Bemowo • 1 hr late")
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 12))
-                                    ThreeDots(size: 3, color: .gray)
+                                    
                                 }
                             }
                             
@@ -80,7 +86,15 @@ struct FeedView: View {
                                 
                                 FeedCell(bereal: bereal, blur: feedModel.blur, viewModel: FeedCellViewModel(beReal: bereal))
                                     .onAppear {
-                                        print("BEREAL: \(bereal.username)")
+                                        guard let userId = AuthViewModel.shared.currentUser?.id else { return }
+                                        
+                                        if (self.feedModel.blur == true) {
+                                            if (bereal.userId == userId) {
+                                                self.feedModel.blur = false
+                                            } else {
+                                                self.feedModel.blur = true
+                                            }
+                                        }
                                     }
                                 
                             }
@@ -134,10 +148,10 @@ struct FeedView: View {
                                             )
                                     }
                                     
-//                                Image("profilePhoto")
-//                                    .resizable()
-//                                    .frame(width: 35, height: 35)
-//                                    .cornerRadius(17.5)
+                                    //                                Image("profilePhoto")
+                                    //                                    .resizable()
+                                    //                                    .frame(width: 35, height: 35)
+                                    //                                    .cornerRadius(17.5)
                                 }
                             }
                             .padding(.horizontal)
@@ -154,21 +168,24 @@ struct FeedView: View {
                         
                         Spacer()
                         
-                        HStack {
-                            VStack {
-                                Image(systemName: "circle")
-                                    .font(.system(size: 80))
-                                Text("Post a late BeReal.")
-                                    .font(.system(size: 14))
-                                    .fontWeight(.bold)
-                            }
-                            .foregroundColor(.white)
-                            .padding(.bottom, 12)
-                            .onTapGesture {
-                                self.cameraViewPresented.toggle()
+                        if feedModel.blur {
+                            HStack {
+                                VStack {
+                                    Image(systemName: "circle")
+                                        .font(.system(size: 80))
+                                    Text("Post a late BeReal.")
+                                        .font(.system(size: 14))
+                                        .fontWeight(.bold)
+                                }
+                                .foregroundColor(.white)
+                                .padding(.bottom, 12)
+                                .onTapGesture {
+                                    self.cameraViewPresented.toggle()
+                                }
                             }
                         }
                     }
+                    .shadow(color: .black.opacity(0.2), radius: 2, x: 1, y: 1)
                 }
             }
             .onAppear {
@@ -177,7 +194,7 @@ struct FeedView: View {
             
         }
         .fullScreenCover(isPresented: $cameraViewPresented, onDismiss: {
-             
+            
         }, content: {
             CameraView(viewModel: CameraViewModel(user: AuthViewModel.shared.currentUser!))
         })
