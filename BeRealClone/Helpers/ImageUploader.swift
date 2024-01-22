@@ -35,7 +35,8 @@ struct ImageUploader {
         let ref = type.filePath
         ref.putData(imageData) { (_, err) in
             if let err = err {
-                print(err.localizedDescription)
+                print("ERROR IN ImageUploader")
+                print(err)
                 return
             }
             ref.downloadURL { url, err in

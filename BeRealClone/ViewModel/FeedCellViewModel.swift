@@ -19,7 +19,8 @@ class FeedCellViewModel: ObservableObject {
     func fetchBeRealUser() {
         Firestore.firestore().collection("users").document(beReal.userId).getDocument { snap, err in
             if let err = err {
-                print(err.localizedDescription)
+                print("ERROR IN FeedCellViewModel")
+                print(err)
                 return
             }
             

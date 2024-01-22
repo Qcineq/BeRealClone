@@ -89,8 +89,9 @@ class AuthViewModel: ObservableObject {
             }
         }
         catch {
-            print("ERROR")
-            handleError(error: error.localizedDescription)
+            print("ERROR in AuthViewModel")
+            print(error)
+//            handleError(error: error.localizedDescription)
         }
     }
     

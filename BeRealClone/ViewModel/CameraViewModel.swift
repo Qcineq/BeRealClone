@@ -47,7 +47,8 @@ class CameraViewModel: ObservableObject {
                     
                 ])
         } catch {
-            print(error.localizedDescription)
+            print("ERROR IN CameraViewModel")
+            print(error)
         }
     }
     

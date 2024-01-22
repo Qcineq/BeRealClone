@@ -45,7 +45,8 @@ class FeedViewModel: ObservableObject {
             self.bereals = data.documents.compactMap({ try? $0.data(as: BeReal.self) })
             
         } catch {
-            print(error.localizedDescription)
+            print("ERROR IN fetchData in FeedViewModel")
+            print(error)
         }
     }
     
@@ -56,7 +57,8 @@ class FeedViewModel: ObservableObject {
             let data = try await db.collection("posts").document(date).collection("bereals").document(userId).getDocument()
             self.bereal = try data.data(as: BeReal.self)
         } catch {
-            print(error.localizedDescription)
+            print("ERROR In fetchOwnPost in FeedViewModel")
+            print(error)
         }
     }
     
