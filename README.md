@@ -35,6 +35,13 @@ Ensure you have the following dependencies installed before running the applicat
 
 ## Screenshots
 
-
-
+![App](BeRealClone/Assets.xcassets/ReadmePhotos/ReadmePhotoApp.imageset/ReadmePhotoApp.png)
 *Screenshot: Feed Screen, Setting View with working features such as Sign Out user, Edit Profile View and Camera View.*
+
+
+![FirebaseUser](BeRealClone/Assets.xcassets/ReadmePhotos/ReadmeFirebaseUser.imageset/ReadmeFirebaseUser.png)
+*Screenshot: Sample user saved in Firebase.*
+
+
+![App](BeRealClone/Assets.xcassets/ReadmePhotos/ReadmeFirebaseSampleBeReal.imageset/ReadmeFirebaseSampleBeReal.png)
+*Screenshot: Sample BeReal post saved in Firebase*
