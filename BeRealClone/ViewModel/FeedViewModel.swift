@@ -46,7 +46,7 @@ class FeedViewModel: ObservableObject {
             
         } catch {
             print("ERROR IN fetchData in FeedViewModel")
-            print(error)
+            print(error.localizedDescription)
         }
     }
     

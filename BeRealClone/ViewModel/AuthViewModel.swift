@@ -91,7 +91,7 @@ class AuthViewModel: ObservableObject {
         catch {
             print("ERROR in AuthViewModel")
             print(error)
-//            handleError(error: error.localizedDescription)
+            //            handleError(error: error.localizedDescription)
         }
     }
     
@@ -121,7 +121,7 @@ class AuthViewModel: ObservableObject {
         guard let userId = userSession?.uid else { return }
         
         do {
-           try await Firestore.firestore().collection("users").document(userId).updateData(data as [String: Any])
+            try await Firestore.firestore().collection("users").document(userId).updateData(data as [String: Any])
         }
         catch {
             handleError(error: error.localizedDescription)
